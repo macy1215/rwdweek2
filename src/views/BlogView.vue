@@ -1,7 +1,7 @@
 <template>
-  <h1>This is About page.</h1>
+  <h1>部落格</h1>
   <RouterLink to="/">Home</RouterLink> |
-  <RouterLink to="/about">About</RouterLink>
+  <RouterLink to="/blogcontentview">部落格內頁</RouterLink>
 </template>
 
 <script>
