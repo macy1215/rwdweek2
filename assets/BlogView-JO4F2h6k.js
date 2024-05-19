@@ -1,1 +1,0 @@
-import{_ as a,c as s,e as o,w as n,f as e,F as c,b as r,r as _,o as l}from"./index-0mC6Ibk2.js";const d={},i=r("h1",null,"部落格",-1);function p(u,f,m,x,h,k){const t=_("RouterLink");return l(),s(c,null,[i,o(t,{to:"/"},{default:n(()=>[e("Home")]),_:1}),e(" | "),o(t,{to:"/blogcontentview"},{default:n(()=>[e("部落格內頁")]),_:1})],64)}const B=a(d,[["render",p]]);export{B as default};
