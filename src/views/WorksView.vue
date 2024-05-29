@@ -54,7 +54,7 @@
   <div class="container">
     <div class="works">
       <ul class="works-row">
-        <li class="col-6">
+        <li class="col-6 col-m-12">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image1.png?raw=true"
@@ -162,7 +162,7 @@
             </div> -->
           </div>
         </li>
-        <li class="col-6">
+        <li class="col-6 col-m-12">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image2.png?raw=true"
@@ -188,7 +188,7 @@
             </div>
           </div>
         </li>
-        <li class="col-6">
+        <li class="col-6 col-m-12">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image3.png?raw=true"
@@ -214,7 +214,7 @@
             </div>
           </div>
         </li>
-        <li class="col-6">
+        <li class="col-6 col-m-12">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image4.png?raw=true"
@@ -240,7 +240,7 @@
             </div>
           </div>
         </li>
-        <li class="col-6">
+        <li class="col-6 col-m-12">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image5.png?raw=true"
@@ -266,7 +266,7 @@
             </div>
           </div>
         </li>
-        <li class="col-6">
+        <li class="col-6 col-m-12">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image6.png?raw=true"
