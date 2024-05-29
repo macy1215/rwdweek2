@@ -1,0 +1,269 @@
+
+.banner-con{
+  padding: 80px 0px;
+  width: 670px;
+}
+
+.content-box {
+  position: relative;
+  p{
+    text-align: center;
+  }
+  .bannerp-style1{
+    margin-top: -12px;
+    img{
+      position:absolute;
+    }
+    p{
+      position: relative;
+      line-height: 1.2;
+    }
+  }
+  .bannerp-style2{
+    padding-top: 16px;
+    position: relative;
+    img{
+      position:absolute;
+    }
+    p{
+      position: relative;
+      line-height: 1.2;
+    }
+  }
+}
+
+.quo-left {
+  top: 0px;
+  left: 0px;
+}
+.quo-right {
+  position: relative;
+  bottom: 6px;
+  left: 90%;
+}
+.mark-01 {
+  top: 85px;
+  right: 8%;
+}
+
+.mark-02 {
+  bottom: -3px;
+  right: 11%;
+}
+.txtindex {
+  z-index: 2;
+}
+
+.banner-bottom{
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 24px 12px 0px 12px;
+  text-align: justify;
+}
+.bottom-box{
+  text-align: center;
+  p{
+    padding: 0px;
+  }
+}
+.bot-line {
+  border-bottom: #c1c1c1 solid 2px;
+  width: 24px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.works {
+  padding: 120px 0px;
+}
+
+.works-row{
+  display: flex;
+  flex-wrap: wrap; // 掉下去
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.col-6{
+  width: 48%;
+  display: flex;
+  flex-grow: 0.5;
+}
+.card-img-top{
+  outline: 1px solid #F1F1F1;
+  border-radius: 8px;
+}
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.card-body {
+  padding: 16px;
+  .card-text{
+    margin-top: 8px;
+  }
+}
+
+.card-round-btn {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  a {
+    text-decoration: none;
+    padding: 4px 12px;
+    display: block;
+    font-size: 1rem;
+    border-radius: 50rem;
+      &:hover {
+      color: #ffffff;
+      background: #919191;
+      }
+  }
+}
+
+.page-box{
+  padding-top: 72px;
+}
+.page{
+  ul{
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    gap: 16px;
+    a{
+     padding: 1px 13px 3px 13px;
+    //  display: block;
+    }
+  }
+}
+.page-item{
+  --bs-pagination-color: #3B3B3B;
+  --bs-pagination-border-width: 0px;
+  display: table;
+}
+.page-link {
+  border-radius:4px ;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+  &:hover {
+    color: white;
+    background-color: #1E1E1E;
+    border-color: #1E1E1E;
+    border: 0px;
+  }
+}
+
+
+.border-gray{
+  border: 1px solid #C1C1C1;
+}
+@media (max-width: 1200px) {
+  .works{
+    padding: 80px 12px;
+  }
+  
+  .footer{
+    background-size: cover;
+    .footer-box{
+      padding: 40px 16px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-con{
+    width: 100%;
+    padding: 40px 37.5px;
+    .content-box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .bannerp-style1{
+        padding-top: 13.33px;
+        margin-top: 0px;
+        p{
+          font-size: 1.25rem;
+          line-height: 1.5;
+        }
+      }
+      .bannerp-style2{
+        padding-top: 8px;
+        p{
+          font-size: 1.25rem;
+          line-height: 1.5;
+          padding: 0px 6%;
+        }
+      }
+    }
+  }
+
+  .quo-left {
+    width: 64px;
+  }
+  .quo-right {
+    display: none;
+  }
+  .mark-01 {
+    top: 63%;
+    right: 23%;
+    width: 38%;
+  }
+  
+  .mark-02 {
+    bottom: 3%;
+    right: 23%;
+    width: 38%;
+  }
+ .banner-bottom{
+  flex-direction: column;
+  padding: 40px 32.5px;
+ }
+ .card-title {
+  font-size: 1.25rem;
+}
+ .card-round-btn {
+  gap: 8px;
+}
+ .col-6 {
+  width: 100%;
+  justify-content: space-evenly;
+}
+.works-row {
+  gap: 48px;
+}
+.page-box {
+  padding-top: 48px;
+}
+.footer {
+  .footer-box {
+    flex-direction: column;
+    padding: 40px 12px;
+  .box-in{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 22.5px;
+    ul{
+      width: 100%;
+    }
+    .footer-logo{
+      width: 120px;
+      display: flex;
+      justify-content: center;
+      a{
+        background-position: center;
+      }
+    }
+  }
+  }
+}
+}

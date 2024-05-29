@@ -1,9 +1,7 @@
 <template>
-    <h1>服務項目</h1>
+  <h1>服務項目</h1>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>

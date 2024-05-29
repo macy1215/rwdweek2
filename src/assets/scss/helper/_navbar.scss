@@ -1,0 +1,185 @@
+.backColor{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F1F1F1
+}
+
+h1 {
+    width: 90px;
+    a {
+      background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 40px;
+      padding: 0px;
+      display: block;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0px;
+    }
+  }
+
+  .nav-page{
+    margin-right: 40px;
+    span{
+      padding:8px 0px;
+    }
+  }
+
+  .navbar-toggler{
+    display: none;
+  }
+  .close{
+    display: none;
+  }
+  
+  .navbar{
+    padding: 32px 0;
+    display: flex;
+  }
+  .nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-list ul {
+    display: flex;
+    .nav-page{
+      &:hover {
+        background:
+        linear-gradient(to right, #919191 1px, transparent 1px) 0 0,
+        linear-gradient(to right, #919191 1px, transparent 1px) 0 100%,
+        linear-gradient(to left, #919191 1px, transparent 1px) 100% 0,
+        linear-gradient(to left, #919191 1px, transparent 1px) 100% 100%,
+        linear-gradient(to bottom, #919191 1px, transparent 1px) 0 0,
+        linear-gradient(to bottom, #919191 1px, transparent 1px) 100% 0,
+        linear-gradient(to top, #919191 1px, transparent 1px) 0 100%,
+        linear-gradient(to top, #919191 1px, transparent 1px) 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 8px 8px;
+        // transition: all 0.3s ease-in-out;
+      }
+      a{
+        padding: 4px 8px;
+        text-decoration: none;
+        display: block;
+      }
+    }
+  }
+
+  .nav-page:hover {
+    background:
+    linear-gradient(to right, #919191 1px, transparent 1px) 0 0,
+    linear-gradient(to right, #919191 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, #919191 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, #919191 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, #919191 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, #919191 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, #919191 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, #919191 1px, transparent 1px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    // transition: all 0.3s ease-in-out;
+  }
+  .navbar-humber{
+    display: none;
+  }
+
+  @media (max-width:1200px) {
+    .navbar{
+      padding: 32px 16px;
+    }
+  }
+  @media (max-width:768px) {
+    .navbar{
+      display: none;
+    }
+    .nav-mobil-list{
+      padding: 11.5px 12px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+    .navbar-humber{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      // flex-wrap: inherit;
+      .navbar-toggler{
+        display: block;
+        border: 0px;
+        padding: 0px;
+        background-color: white;
+        border-radius: 8px;
+          .active
+            &:hover{
+            background-color: #F1F1F1;
+          }
+          .material-symbols-outlined{
+            font-size: 30px;
+            font-weight: 800;
+          }
+      }
+    }
+
+
+    .mobil-nav{
+      position: absolute;
+      width: 100%;
+      top: 101%;
+      left: 0px;
+      z-index: 4;
+      .navbar-nav{
+        display: flex;
+        float: right;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        background-color: #FFFFFF;
+        padding: 40px 0px;
+        margin: 0px;
+        list-style: none;
+        width: 100%;
+        .nav-mobil-page{
+          padding: 0px;
+          text-align: center;
+          margin: 0px;
+        }
+      }
+    }
+
+    .nav-mobil-page{
+      &:hover{
+        background: 
+          linear-gradient(to right, #919191 1px, transparent 1px) 0 0, 
+          linear-gradient(to right, #919191 1px, transparent 1px) 0 100%, 
+          linear-gradient(to left, #919191 1px, transparent 1px) 100% 0, 
+          linear-gradient(to left, #919191 1px, transparent 1px) 100% 100%, 
+          linear-gradient(to bottom, #919191 1px, transparent 1px) 0 0, 
+          linear-gradient(to bottom, #919191 1px, transparent 1px) 100% 0, 
+          linear-gradient(to top, #919191 1px, transparent 1px) 0 100%, 
+          linear-gradient(to top, #919191 1px, transparent 1px) 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 8px 8px;
+        font-weight: 700;
+      }
+      a{
+        display: block;
+        padding: 4px 8px;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+    } 
+
+    .nav-list{
+      display: none;
+    }
+    .hamber-icon{
+      position: relative;
+    }
+
+  }

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import "@/assets/scss/helper/_reset.css";
+
+// BS
+// @import "bootstrap/scss/functions";
+// @import "./helper/variables";
+// @import "bootstrap/scss/bootstrap";
+// @import "bootstrap-icons/font/bootstrap-icons.css";
+
+// 自訂 css
+@import "./helper/work";
+
+@import "./helper/main";
