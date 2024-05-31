@@ -3,14 +3,25 @@
   <div class="banner-bg">
     <div class="container">
       <div class="row banner">
-        <div class="col-4">
+        <div class="col-4 col-m-12">
           <h2 class="fw-bold fs-1 lh-12 primary-700-color">Hi！我是 Noel</h2>
-          <div class="mt-4 primary-600-color fs-5">
-            具有 10 年經驗的
+          <div class="mt-4 primary-600-color fs-5 mobil-layout">
+            <span>具有 10 年經驗的</span>
             <span>資深 UI 設計師</span>
-            兼
+            <span>兼</span>
             <span>前端工程師</span>
-            <span class="mt-2">技術雙修並行，熱衷於優化使用者的網頁體驗</span>
+            <span>技術雙修並行，</span>
+            <span>熱衷於優化使用者的網頁體驗</span>
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true"
+              alt="mark"
+              class="mark-pos1"
+            />
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true"
+              alt="mark"
+              class="mark-pos2"
+            />
           </div>
           <div class="mt-3 primary-400-color">
             WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN
@@ -23,10 +34,10 @@
             </ul>
           </div>
         </div>
-        <div class="col-8">
+        <div class="col-8 col-m-12">
           <div class="rightImg">
             <img
-              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-lg.png?raw=true"
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-sm.png?raw=true"
               alt=""
             />
           </div>
@@ -35,7 +46,7 @@
     </div>
   </div>
   <!-- 設計項目 -->
-  <div class="pt-120px">
+  <div class="content">
     <div class="content-text">
       <h3>
         <span class="title fs-2 primary-bg-white-color">作品介紹</span>
@@ -44,16 +55,19 @@
     <div class="content-body">
       <div class="box-1">
         <div class="container h-100">
-          <div class="row justify-content-space-between h-100">
-            <div class="col-7">
-              <div class="box-product">
+          <div class="row justify-content-space-between mobil-flex-dir">
+            <div class="col-7 col-m-12">
+              <div class="box-product h-100 position-relative">
                 <img
                   src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1.png?raw=true"
                   alt="作品圖1"
+                  class="position-absolute"
                 />
               </div>
             </div>
-            <div class="col-5 row align-items-center justify-content-center">
+            <div
+              class="col-5 row align-items-center justify-content-center col-m-12"
+            >
               <div class="box-content">
                 <h4 class="fs-3 primary-white-color">星際旅行訂票平台</h4>
                 <p class="primary-white-color p-t-8">
@@ -81,9 +95,11 @@
       <div class="box-2">
         <div class="container h-100">
           <div
-            class="row justify-content-space-between align-items-stretch h-100"
+            class="row justify-content-space-between align-items-stretch mobil-flex-dir"
           >
-            <div class="col-5 row align-items-center justify-content-center">
+            <div
+              class="col-5 col-m-12 row align-items-center justify-content-center col-m-12"
+            >
               <div class="box-content">
                 <h4 class="fs-3 primary-white-color">理財APP</h4>
                 <p class="primary-white-color p-t-8">
@@ -105,22 +121,32 @@
                 </div>
               </div>
             </div>
-            <div class="col-7"></div>
+            <div class="col-7 col-m-12">
+              <div class="box-product">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-sm.png?raw=true"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="box-3">
         <div class="container h-100">
-          <div class="row justify-content-space-between h-100">
-            <div class="col-7 h-100">
-              <div class="box-product-2">
+          <div class="row justify-content-space-between mobil-flex-dir h-100">
+            <div class="col-7 col-m-12">
+              <div class="box-product-3">
                 <img
                   src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3.png?raw=true"
                   alt="作品圖3"
+                  class="position-relative"
                 />
               </div>
             </div>
-            <div class="col-5 row align-items-center justify-content-center">
+            <div
+              class="col-5 row align-items-center justify-content-center col-m-12"
+            >
               <div class="box-content">
                 <h4 class="fs-3 primary-white-color">醫美診所官網</h4>
                 <p class="primary-white-color p-t-8">
@@ -148,7 +174,7 @@
     </div>
   </div>
   <!-- 服務項目 -->
-  <div class="serve-bg primary-bg-100-color py-120px">
+  <div class="serve-bg primary-bg-100-color">
     <div class="container">
       <div class="content-text">
         <h3>
@@ -208,7 +234,7 @@
   </div>
   <!-- 精選文章 -->
 
-  <div class="pt-120px">
+  <div class="py-120px py-m-80">
     <div class="container">
       <div class="content-text">
         <h3>
@@ -216,55 +242,140 @@
         </h3>
       </div>
       <!-- 文章列表 -->
-      <div class="p-t-80">
-        <ul>
-          <li>
-            <a href="#"
-              ><div>
-                <div><img src="" alt="" /></div></div
-            ></a>
-          </li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-      </div>
-      <!--列表選單 -->
-      <div>
-        <ul>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
+      <div class="article">
+        <!-- Slider main container -->
+        <Swiper
+          :pagination="{ clickable: true }"
+          :modules="modules"
+          :spaceBetween="24"
+          :slidesPerView="3"
+          :breakpoints="{
+            '992': {
+              slidesPerView: 1,
+              spaceBetween: 48,
+              slidesPerView: 1,
+              direction: 'vertical',
+            },
+          }"
+          class="mySwiper"
+        >
+          <template v-for="item in article" :key="item.item">
+            <swiper-slide>
+              <div class="swiper-box">
+                <img :src="item.imgUrl" :alt="item.title" />
+              </div>
+              <h4 class="fs-5 fw-bold">{{ item.title }}</h4>
+              <div class="swiper-btn-grop">
+                <span
+                  ><a
+                    href="#"
+                    class="primary-700-color primary-bg-200-color"
+                    @click.prevent="linkClick"
+                    >{{ item.tag.tag1 }}</a
+                  >
+                </span>
+                <span
+                  ><a
+                    href="#"
+                    class="primary-600-color"
+                    @click.prevent="linkClick"
+                    >{{ item.date }}</a
+                  ></span
+                >
+              </div>
+            </swiper-slide>
+          </template>
+        </Swiper>
+        <div class="mobil-show mt-40 row justify-content-center">
+          <button
+            type="button"
+            class="button primary-bg-black-color primary-white-color fs-5 margin-0-auto"
+          >
+            詳細內容與合作流程
+            <span><i class="bi bi-arrow-right fw-bold"></i></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script type="module">
+import { Swiper, SwiperSlide } from 'swiper/vue';
+// Import Swiper styles
+
+import { Pagination } from 'swiper/modules';
+
 export default {
   data() {
     return {
+      modules: [Pagination],
       article: [
         {
           item: 1,
           imgUrl:
             'https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image1.png?raw=true',
+          title: 'Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)',
+          tag: { tag1: 'UI/UX 新知' },
+          date: '2024/02/10',
         },
         {
           item: 2,
           imgUrl:
             'https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image2.png?raw=true',
+          title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)',
+          tag: { tag1: 'UI/UX 新知' },
+          date: '2023/11/20',
         },
         {
           item: 3,
           imgUrl:
             'https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image3.png?raw=true',
+          title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)',
+          tag: { tag1: 'UI/UX 新知' },
+          date: '2023/10/18',
+        },
+        {
+          item: 4,
+          imgUrl:
+            'https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image4.png?raw=true',
+          title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)',
+          tag: { tag1: 'UI/UX 新知' },
+          date: '2023/10/18',
+        },
+        {
+          item: 5,
+          imgUrl:
+            'https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image5.png?raw=true',
+          title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)',
+          tag: { tag1: 'UI/UX 新知' },
+          date: '2023/10/18',
+        },
+        {
+          item: 6,
+          imgUrl:
+            'https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image6.png?raw=true',
+          title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)',
+          tag: { tag1: 'UI/UX 新知' },
+          date: '2023/10/18',
+        },
+        {
+          item: 7,
+          imgUrl:
+            'https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image7.png?raw=true',
+          title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)',
+          tag: { tag1: 'UI/UX 新知' },
+          date: '2023/10/18',
         },
       ],
     };
   },
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  // 2.created 生命週期(涵示)
+  created() {},
   mounted() {
     $('.ig').hover(
       function show() {
@@ -290,6 +401,12 @@ export default {
         $(this).removeClass('icon-hover');
       },
     );
+  },
+  // 3.methods 方法(物件)
+  methods: {
+    linkClick(e) {
+      e.preventDefault();
+    },
   },
 };
 </script>

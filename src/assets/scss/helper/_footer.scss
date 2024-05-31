@@ -41,32 +41,23 @@
         }
       }
     }
-    .form{
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      padding: 8px 24px;
-      border-radius: 8px;
-      span{
-        padding-left: 8px;
-      }
-    }
   }
 
-  @media (max-width: 1200px) {
+  
 
-    
-    .footer{
-      background-size: cover;
-      .footer-box{
-        padding: 40px 16px;
-      }
+  @media (max-width: 1200px) {
+  .footer{
+    background-size: cover;
+    .footer-box{
+      padding: 40px 16px;
     }
+  }
   }
 
   @media (max-width:767px) {
     .footer {
       background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true");
+      background-size: cover;
         .footer-box {
           flex-direction: column;
           padding: 40px 12px;
@@ -75,12 +66,17 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding: 40px 22.5px;
+          .footer-txt{
+            p + p{
+              margin-top: 4px;
+            }
+          }
           ul{
             width: 100%;
           }
           .footer-logo{
             width: 120px;
+            height: 54px;
             display: flex;
             justify-content: center;
             a{
@@ -88,6 +84,35 @@
             }
           }
         }
+        .box-in:last-child{
+          padding: 40px 22.5px 0px 22.5px;
+        }
         }
       }
   }
+
+// form 
+
+.form{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 24px;
+  border-radius: 8px;
+  span{
+    padding-left: 8px;
+  }
+}
+@media (max-width:767px) {
+  .form{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 4px 24px;
+    border-radius: 8px;
+    span{
+      padding-left: 8px;
+    }
+  }
+
+}

@@ -5,6 +5,11 @@ import { createPinia } from 'pinia';
 // import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap-icons/font/bootstrap-icons.scss';
 
+// Swiper
+// import Swiper JS
+
+// import Swiper styles
+
 import App from './App.vue';
 import router from './router';
 

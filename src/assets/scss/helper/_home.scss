@@ -5,16 +5,121 @@
     background-repeat: no-repeat;
 }
 .banner{
-    height: 768px;
+    height: 100%;
+    padding: 248px 0px;
     align-items: center;
     justify-content: space-between;
+}
+@media (max-width: 1600px) {
+    .banner-bg{
+        background-size: 65%;
+    }
+    .banner{
+        height: 100%;
+        padding: 138px 0px;
+    }
+
+}
+@media (max-width: 1400px) {
+    .banner{
+        padding: 100px 0px;
+    }
+
+}
+@media (max-width: 992px) {
+    .banner-bg{
+        background-size:0%;
+    }
+    .banner{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0px;
+        padding:0px;
+    }
 }
 
 .rightImg{
     display: none;
 }
+@media (max-width:992px) {
+    .rightImg{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
 .banner{
     align-items: center;
+}
+.mobil-layout span:nth-child(2){
+    padding-left: 8px;
+}
+.mobil-layout span:nth-child(3){
+    padding: 0px 8px;
+}
+.mobil-layout span:nth-child(5){
+   margin-top: 8px;
+}
+.mobil-layout{
+    position: relative;
+}
+.mark-pos1{
+    position: absolute;
+    bottom: 52%;
+    left: 146px;
+    z-index: -1;
+    width: 148px;
+}
+.mark-pos2{
+    position: absolute;
+    bottom: 53%;
+    right: -2%;
+    z-index: -1;
+    width: 119px;
+}
+
+@media (max-width:992px) {
+    .banner .col-4{
+        padding: 40px 53.5px;
+        margin: 0px auto;
+        h2{
+            font-size: 32px;
+            text-align: center;
+        }
+        .mobil-layout{
+            text-align: center;
+        }
+        .mobil-layout span:nth-child(2){
+            padding-left: 0px;
+        }
+        .mobil-layout span:nth-child(5){
+            display: block;
+            text-align: center;
+        }
+        .mark-pos1{
+            position: absolute;
+            bottom: 55%;
+            left: -11px;
+            z-index: -1;
+        }
+        .mark-pos2{
+            position: absolute;
+            bottom: 56%;
+            right: -12px;
+            z-index: -1;
+        }
+    } 
+    .mobil-layout :first-child{
+        display: block;
+        text-align: center;
+    }
+    .mobil-layout ~div{
+        text-align: center;
+    }
 }
 .icon{
     display: flex;
@@ -75,7 +180,20 @@ a {
     margin: 0px auto;
     padding-bottom: 80px;
 }
+.content{
+  padding-top: 120px;       
+}
+@media (max-width:992px) {
+    .icon{
+        margin-top: 1.5rem;
+        justify-content: center;
+    }
+    .content{
+        padding-top: 40px;
+    }
+}
 
+// 設計 Banner
 h3{
     position: relative;
     display: flex;
@@ -121,6 +239,32 @@ h3::before{
     top: 50%;
     transform: translateY(-50%);
 }
+
+@media (max-width:992px) {
+    .content-text{
+        padding-bottom: 40px;
+        .title{
+            font-size: 1.5rem;
+        }
+    }
+    h3::before{
+        width: 240px;
+    }
+    .title::before{
+        width: 6px;
+        height: 6px;
+        left: 17%;
+        top: 50%;
+    }
+    .title::after{
+        width: 6px;
+        height: 6px;
+        right: 17%;
+        top: 50%;
+    }
+}
+
+// 設計 Banner Box1
 .box-1{
     height: 800px;
     background-color: rgba(39, 39, 39, 1);
@@ -135,49 +279,25 @@ h3::before{
     left: 0; right: 0; top: 0; bottom: 0;
     opacity: 0.4;
 }
-.box-2{
+.box-1 .box-product{
     height: 800px;
-    background-color: rgba(192, 239, 254, 1);
-    position: relative;
-    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-lg.png?raw=true');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.box-2::before{
-    content: "";
-    position: absolute;
-    left: 0; right: 0; top: 0; bottom: 0;
-    background: rgba(10, 16, 19, 0.5);
-    max-width: 948px;
-    // z-index: 1;
-}
-.box-3{
-    height: 800px;
-    position: relative;
-    background: rgba(209, 189, 132, 1);
-    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3-bg.png?raw=true');
-}
-.box-3::before{
-    content: "";
-    background-color: rgba(13, 12, 7, 0.5);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0; right: 0; top: 0; bottom: 0;
-}
-
-.box-product{
-    position: absolute;
-    bottom: -5px;
     img{
         max-width: 100%;
+        bottom: 0%;
     }
 }
-.box-product-2{
-    position: absolute;
-    top: 176px;
-    img{
-        max-width: 100%;
+@media (max-width:992px) {
+    .box-1{
+        height: 578px;
+        .mobil-flex-dir{
+            flex-direction: column;
+        }
+        .box-product{
+            height: 390px;
+            img{
+               padding: 0px 40px;
+            }
+        }
     }
 }
 .box-content{
@@ -229,7 +349,257 @@ h3::before{
         }
     }
 }
+@media (max-width:992px) {
+    .box-1{
+        .box-content{
+            background-color: rgb(255, 255, 255);
+            border-radius: 0px;
+            padding: 24px 24px 0px 24px;
+            height: auto;
+            h4{
+                color: #1E1E1E;
+                text-align: center;
+                font-size: 1.25rem;
+                line-height: 24px;
+            }
+            h4 + p{
+                color:#5B5B5B;
+                text-align: center;
+                line-height: 24px;
+            }
+            ul{
+                padding-top: 16px;
+                padding-bottom: 0px;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                border-bottom: none;
+                li{
+                    background-color: #F1F1F1;
+                    border-radius: 16px;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                    a{
+                        display: block;
+                        color: rgba(59, 59, 59, 1);
+                        padding: 4px 12px;
+                    }
+                }
+            }
+            .button-box{
+                border: 0px;
+                padding: 20px 0px 0px 0px;
+            }
+            .button{
+                font-size: 16px;
+                padding: 8px 16px;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+// 設計 Banner Box2
+.box-2{
+    height: 800px;
+    background-color: rgba(192, 239, 254, 1);
+    position: relative;
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-lg.png?raw=true');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .col-7 img{
+        display: none;
+    }
+}
+.box-2::before{
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background: rgba(10, 16, 19, 0.5);
+    max-width: 948px;
+    // z-index: 1;
+}
+@media (max-width:992px) {
+    .box-2{
+        height: 602px;
+        margin-top: 48px;
+        background-size: cotain;
+        background-image: none;
+        background-color: rgb(255, 255, 255);
+        .mobil-flex-dir{
+            flex-direction: column-reverse;
+        }
+        .box-product{
+            height: 390px;
+            img{
+               display: block;
+            }
+        }
+    }
+    .box-2::before{
+        opacity: 0;
+    }
+}
+@media (max-width:992px) {
+    .box-2{
+        .box-content{
+            background-color: rgb(255, 255, 255);
+            border-radius: 0px;
+            padding: 24px 24px 0px 24px;
+            height: auto;
+            h4{
+                color: #1E1E1E;
+                text-align: center;
+                font-size: 1.25rem;
+                line-height: 24px;
+            }
+            h4 + p{
+                color:#5B5B5B;
+                text-align: center;
+                padding: 8px 6px 0px 6px;
+                line-height: 24px;
+            }
+            ul{
+                padding-top: 16px;
+                padding-bottom: 0px;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                border-bottom: none;
+                li{
+                    background-color: #F1F1F1;
+                    border-radius: 16px;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                    a{
+                        display: block;
+                        color: rgba(59, 59, 59, 1);
+                        padding: 4px 12px;
+                    }
+                }
+            }
+            .button-box{
+                border: 0px;
+                padding: 20px 0px 0px 0px;
+            }
+            .button{
+                font-size: 16px;
+                padding: 8px 16px;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+// 設計 Banner Box3
+.box-3{
+    height: 800px;
+    position: relative;
+    background: rgba(209, 189, 132, 1);
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3-bg.png?raw=true');
+}
+.box-3::before{
+    content: "";
+    background-color: rgba(13, 12, 7, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+
+.box-product-3{
+    position: absolute;
+    top: 176px;
+    img{
+        max-width: 100%;
+    }
+}
+@media (max-width:992px) {
+    .box-3{
+        height: 578px;
+        margin-top: 48px;
+        background-position: right -160px top 0px;
+        background-size: auto 390px;
+        .mobil-flex-dir{
+            flex-direction: column;
+        }
+        .box-product-3{
+            height: 390px;
+            position:relative;
+            top: 0px;
+            img{
+               display: block;
+               padding: 90px 40px;
+            }
+        }
+    }
+}
+@media (max-width:992px) {
+    .box-3{
+        .box-content{
+            background-color: rgb(255, 255, 255);
+            border-radius: 0px;
+            padding: 24px 24px 0px 24px;
+            
+            height: auto;
+            h4{
+                color: #1E1E1E;
+                text-align: center;
+                font-size: 1.25rem;
+                line-height: 24px;
+            }
+            h4 + p{
+                color:#5B5B5B;
+                text-align: center;
+                padding: 8px 6px 0px 6px;
+                line-height: 24px;
+            }
+            ul{
+                padding-top: 16px;
+                padding-bottom: 0px;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                border-bottom: none;
+                li{
+                    background-color: #F1F1F1;
+                    border-radius: 16px;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                    a{
+                        display: block;
+                        color: rgba(59, 59, 59, 1);
+                        padding: 4px 12px;
+                    }
+                }
+            }
+            .button-box{
+                border: 0px;
+                padding: 20px 0px 0px 0px;
+            }
+            .button{
+                font-size: 16px;
+                padding: 8px 16px;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+// 服務項目
 .serve-bg{
+padding: 120px 0px;
     background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-services-bg.png?raw=true');
     background-repeat: no-repeat;
     background-size: contain;
@@ -259,6 +629,76 @@ h3::before{
     gap: 24px;
     a{
         width: 100%;
+        display: block;
+    }
+}
+@media (max-width:992px) {
+    .serve-bg{
+        margin-top: 80px;
+        padding: 80px 0px;
+        ul {
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        flex-direction: column;
+        }
+        .fs-3{
+            font-size: 1.5rem;
+            line-height: 28.8px;
+        }
+        .p-t-80 {
+            padding-top: 40px;
+            .fs-3{
+                font-size: 1.25rem;
+                line-height: 24px;
+            }
+            .mt-40{
+                margin-top: 24px;
+                .button{
+                    font-size: 16px;
+                    line-height: 24px;
+                    
+                }
+            }
+        }
+        .content-body .button {
+            padding: 8px 16px;
+        }
+    }
+}
+
+.swiper-wrapper{
+    padding-bottom: 50px;
+}
+.swiper-box{
+    padding-bottom: 16px;
+}
+.swiper-btn-grop{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.swiper-btn-grop{
+    span:first-child a{
+        display: block;
+        padding: 4px 12px;
+        border-radius: 16px;
+    }
+}
+
+.swiper-pagination-bullet-active{
+    background:black; 
+}
+
+.article .mobil-show{
+    display: none;
+}
+@media(max-width:992px){
+    .mySwiper{
+        display: none;
+    }
+    .article .mobil-show{
         display: block;
     }
 }

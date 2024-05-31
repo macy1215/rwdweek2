@@ -1,4 +1,6 @@
-
+body{
+  padding-top: 96px;
+}
 .container{
   max-width: 1296px;
   margin: 0px auto;
@@ -149,9 +151,7 @@
 .p-t-80{
   padding-top: 80px;
 }
-.pt-120px{
-  padding-top: 120px;
-}
+
 .py-120px{
   padding: 120px 0px;
 }
@@ -210,22 +210,43 @@
   width: 100%;
 }
 
+.position-relative{
+  position: relative;
+}
+.position-absolute{
+  position:absolute;
+}
 
-@media (max-width:1200px) {
+
+@media (max-width:1296px) {
   .container{
-    width: 100%;
+    max-width: 100%;
+  }
+  body{
+    padding-top: 56px;
   }
 }
-@media (max-width:768px) {
+@media (max-width:992px) {
   .container{
-    max-width: 768px;
+    max-width: 1296px;
+  }
+  .col-m-12{
+    width: 100%;
+  }
+  .fs-md-6{
+    font-size: 1rem;
+  }
+  .py-m-80{
+    padding: 80px 0px;
   }
 }
 @media (max-width:576px) {
   .container{
-    width: 100%;
+    max-width: 576px;
   }
-  .col-m-12{
-    width: 100%;
+}
+@media (max-width:375px) {
+  .container{
+    max-width: 375px;
   }
 }

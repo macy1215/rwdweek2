@@ -1,19 +1,19 @@
 <template>
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-box">
         <div class="box-in">
           <div class="footer-logo">
             <a href="#">Noel</a>
           </div>
-          <div class="footer-txt fs-5 primary-700-color">
+          <div class="footer-txt fs-5 fs-md-6 primary-700-color">
             <p>若有數位產品設計和開發相關問題</p>
             <p>歡迎填寫表單，或直接與我聯絡！</p>
           </div>
           <div>
             <a
               href="service@hexschool.com?bcc=service@hexschool.com"
-              class="fs-5 primary-500-color lh-12"
+              class="fs-5 primary-500-color lh-12 fs-md-6"
               >service@hexschool.com</a
             >
           </div>
@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
