@@ -12,17 +12,6 @@ const routes = [
         component: () => import('../views/HomeView.vue'),
       },
       {
-        path: '/blog',
-        name: 'Blog',
-        component: () => import('../views/BlogView.vue'),
-        children: [
-          {
-            path: 'blogContent',
-            component: () => import('../views/BlogContentView.vue'),
-          },
-        ],
-      },
-      {
         path: '/service',
         name: 'Service',
         component: () => import('../views/ServiceView.vue'),
@@ -31,6 +20,17 @@ const routes = [
         path: '/works',
         name: 'Works',
         component: () => import('../views/WorksView.vue'),
+      },
+      {
+        path: '/blog',
+        name: 'Blog',
+        component: () => import('../views/BlogsView.vue'),
+        children: [
+          {
+            path: 'blogContent',
+            component: () => import('../views/BlogContentView.vue'),
+          },
+        ],
       },
     ],
   },

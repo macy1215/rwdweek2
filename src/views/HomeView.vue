@@ -2,7 +2,7 @@
   <!-- Banner -->
   <div class="banner-bg">
     <div class="container">
-      <div class="row banner">
+      <div class="row banner-home">
         <div class="col-4 col-m-12">
           <h2 class="fw-bold fs-1 lh-12 primary-700-color">Hi！我是 Noel</h2>
           <div class="mt-4 primary-600-color fs-5 mobil-layout">
@@ -28,9 +28,15 @@
           </div>
           <div>
             <ul class="icon">
-              <li class="ig"><a href="#">instagram</a></li>
-              <li class="fb"><a href="#">facebook</a></li>
-              <li class="yt"><a href="#">youtube</a></li>
+              <li class="ig">
+                <a href="#" @click.prevent="linkClick">instagram</a>
+              </li>
+              <li class="fb">
+                <a href="#" @click.prevent="linkClick">facebook</a>
+              </li>
+              <li class="yt">
+                <a href="#" @click.prevent="linkClick">youtube</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -74,9 +80,9 @@
                   悠遊宇宙的夢想，從這裡開始實現
                 </p>
                 <ul class="p-top-24">
-                  <li><a href="">網頁設計</a></li>
-                  <li><a href="">響應式設計</a></li>
-                  <li><a href="">Bootstrap</a></li>
+                  <li><a href="#" @click.prevent="linkClick">網頁設計</a></li>
+                  <li><a href="#" @click.prevent="linkClick">響應式設計</a></li>
+                  <li><a href="#" @click.prevent="linkClick">Bootstrap</a></li>
                 </ul>
                 <div class="button-box">
                   <button
@@ -106,9 +112,9 @@
                   連動帳戶與行動支付，讓 AI 提供您最好的理財建議
                 </p>
                 <ul class="p-top-24">
-                  <li><a href="">APP設計</a></li>
-                  <li><a href="">iOS</a></li>
-                  <li><a href="">React</a></li>
+                  <li><a href="" @click.prevent="linkClick">APP設計</a></li>
+                  <li><a href="" @click.prevent="linkClick">iOS</a></li>
+                  <li><a href="" @click.prevent="linkClick">React</a></li>
                 </ul>
                 <div class="button-box">
                   <button
@@ -153,9 +159,9 @@
                   永保青春的秘密，從粹究開始
                 </p>
                 <ul class="p-top-24">
-                  <li><a href="">網頁設計</a></li>
-                  <li><a href="">響應式設計</a></li>
-                  <li><a href="">ＷordPress</a></li>
+                  <li><a href="" @click.prevent="linkClick">網頁設計</a></li>
+                  <li><a href="" @click.prevent="linkClick">響應式設計</a></li>
+                  <li><a href="" @click.prevent="linkClick">ＷordPress</a></li>
                 </ul>
                 <div class="button-box">
                   <button
@@ -184,7 +190,10 @@
       <div class="content-body">
         <ul class="row">
           <li>
-            <a href="#" class="primary-white-color list-bg fs-3 fw-bold"
+            <a
+              href="#"
+              class="primary-white-color list-bg fs-3 fw-bold"
+              @click.prevent="linkClick"
               ><img
                 src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/service-item-visual.svg"
                 alt=""
@@ -192,7 +201,11 @@
             >
           </li>
           <li>
-            <a href="#" class="primary-white-color list-bg fs-3 fw-bold">
+            <a
+              href="#"
+              class="primary-white-color list-bg fs-3 fw-bold"
+              @click.prevent="linkClick"
+            >
               <img
                 src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/service-item-ui.svg"
                 alt=""
@@ -200,7 +213,11 @@
             >
           </li>
           <li>
-            <a href="#" class="primary-white-color list-bg fs-3 fw-bold">
+            <a
+              href="#"
+              class="primary-white-color list-bg fs-3 fw-bold"
+              @click.prevent="linkClick"
+            >
               <img
                 src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/service-item-html%26css.svg"
                 alt=""
@@ -208,7 +225,11 @@
             >
           </li>
           <li>
-            <a href="#" class="primary-white-color list-bg fs-3 fw-bold">
+            <a
+              href="#"
+              class="primary-white-color list-bg fs-3 fw-bold"
+              @click.prevent="linkClick"
+            >
               <img
                 src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/service-item-front-end.svg"
                 alt=""
@@ -245,22 +266,26 @@
       <div class="article">
         <!-- Slider main container -->
         <Swiper
-          :pagination="{ clickable: true }"
+          :grid="{
+            rows: 3,
+          }"
           :modules="modules"
-          :spaceBetween="24"
-          :slidesPerView="3"
+          :slidesPerView="1"
           :breakpoints="{
-            '992': {
-              slidesPerView: 1,
-              spaceBetween: 48,
-              slidesPerView: 1,
-              direction: 'vertical',
+            768: {
+              grid: { rows: 1 },
+              slidesPerView: 3,
+              spaceBetween: 24,
+              pagination: {
+                el: swiper - pagination,
+                clickable: true,
+              },
             },
           }"
           class="mySwiper"
         >
           <template v-for="item in article" :key="item.item">
-            <swiper-slide>
+            <swiper-slide class="swiper-slide-set">
               <div class="swiper-box">
                 <img :src="item.imgUrl" :alt="item.title" />
               </div>
@@ -291,7 +316,7 @@
             type="button"
             class="button primary-bg-black-color primary-white-color fs-5 margin-0-auto"
           >
-            詳細內容與合作流程
+            更多文章
             <span><i class="bi bi-arrow-right fw-bold"></i></span>
           </button>
         </div>

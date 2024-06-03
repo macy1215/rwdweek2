@@ -111,8 +111,7 @@
   gap: 24px;
 }
 
-.col-6{
-  width: 48%;
+.works-item{
   display: flex;
   flex-grow: 0.5;
 }
@@ -240,7 +239,7 @@
  .card-round-btn {
   gap: 8px;
 }
- .col-6 {
+ .works-item {
   width: 100%;
   justify-content: space-evenly;
 }

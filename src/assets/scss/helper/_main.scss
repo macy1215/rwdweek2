@@ -130,6 +130,20 @@ body{
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+// google font
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+.tourney {
+  font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
 .mt-4{
   margin-top: 1.5rem;
 }

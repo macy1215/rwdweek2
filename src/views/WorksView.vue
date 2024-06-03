@@ -54,7 +54,7 @@
   <div class="container">
     <div class="works">
       <ul class="works-row">
-        <li class="col-6 col-m-12">
+        <li class="col-6 col-m-12 works-item">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image1.png?raw=true"
@@ -67,13 +67,22 @@
                 悠遊宇宙的夢想，從這裡開始實現
               </p>
               <div class="card-round-btn">
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >網頁設計</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >響應式設計</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >Bootstrap</a
                 >
               </div>
@@ -162,7 +171,7 @@
             </div> -->
           </div>
         </li>
-        <li class="col-6 col-m-12">
+        <li class="col-6 col-m-12 works-item">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image2.png?raw=true"
@@ -175,20 +184,29 @@
                 連動帳戶與行動支付，讓 AI 提供您最好的理財建議
               </p>
               <div class="card-round-btn">
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >APP設計</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >iOS</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >React</a
                 >
               </div>
             </div>
           </div>
         </li>
-        <li class="col-6 col-m-12">
+        <li class="col-6 col-m-12 works-item">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image3.png?raw=true"
@@ -201,20 +219,29 @@
                 永保青春的秘密，從粹究開始
               </p>
               <div class="card-round-btn">
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >網頁設計</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >響應式設計</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >ＷordPress</a
                 >
               </div>
             </div>
           </div>
         </li>
-        <li class="col-6 col-m-12">
+        <li class="col-6 col-m-12 works-item">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image4.png?raw=true"
@@ -227,20 +254,29 @@
                 訂單送單一目瞭然，自動報表分析好輕鬆
               </p>
               <div class="card-round-btn">
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >UI 設計</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >前端開發</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >Wix</a
                 >
               </div>
             </div>
           </div>
         </li>
-        <li class="col-6 col-m-12">
+        <li class="col-6 col-m-12 works-item">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image5.png?raw=true"
@@ -253,20 +289,29 @@
                 三步驟完成訂票，電腦手機都支援
               </p>
               <div class="card-round-btn">
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >前端開發</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >後端支援</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >Vue</a
                 >
               </div>
             </div>
           </div>
         </li>
-        <li class="col-6 col-m-12">
+        <li class="col-6 col-m-12 works-item">
           <div class="card border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image6.png?raw=true"
@@ -279,13 +324,22 @@
                 三步驟完成訂票，電腦手機都支援
               </p>
               <div class="card-round-btn">
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >UI 設計</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >設計系統</a
                 >
-                <a href="#" class="primary-700-color primary-bg-200-color"
+                <a
+                  href="#"
+                  class="primary-700-color primary-bg-200-color"
+                  @click.prevent="linkClick"
                   >網路電商</a
                 >
               </div>
@@ -321,7 +375,11 @@ export default {
       cardDetail: null,
     };
   },
-  methods: {},
+  methods: {
+    linkClick(e) {
+      e.preventDefault();
+    },
+  },
   mounted() {
     // this.cardDetail = new Modal(this.$refs.cardDetail, {});
   },

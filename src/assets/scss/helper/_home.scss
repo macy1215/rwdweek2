@@ -4,7 +4,7 @@
     background-position: top right;
     background-repeat: no-repeat;
 }
-.banner{
+.banner-home{
     height: 100%;
     padding: 248px 0px;
     align-items: center;
@@ -14,14 +14,14 @@
     .banner-bg{
         background-size: 65%;
     }
-    .banner{
+    .banner-home{
         height: 100%;
         padding: 138px 0px;
     }
 
 }
 @media (max-width: 1400px) {
-    .banner{
+    .banner-home{
         padding: 100px 0px;
     }
 
@@ -30,7 +30,7 @@
     .banner-bg{
         background-size:0%;
     }
-    .banner{
+    .banner-home{
         flex-direction: column-reverse;
         align-items: center;
         justify-content: space-between;
@@ -191,16 +191,19 @@ a {
     .content{
         padding-top: 40px;
     }
+    .content-text{
+        max-width: 100%;
+    }
 }
 
 // 設計 Banner
-h3{
+.content-text h3{
     position: relative;
     display: flex;
     justify-content: center;
 }
 // 背景線條
-h3::before{
+.content-text h3::before{
     content:"";
     position: absolute;
     height: 1px;
@@ -247,7 +250,7 @@ h3::before{
             font-size: 1.5rem;
         }
     }
-    h3::before{
+    .content-text h3::before{
         width: 240px;
     }
     .title::before{
@@ -672,6 +675,12 @@ padding: 120px 0px;
 }
 .swiper-box{
     padding-bottom: 16px;
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 }
 .swiper-btn-grop{
     display: flex;
@@ -679,17 +688,14 @@ padding: 120px 0px;
     padding-top: 16px;
 }
 
-.swiper-btn-grop{
-    span:first-child a{
-        display: block;
-        padding: 4px 12px;
-        border-radius: 16px;
-    }
-}
-
-.swiper-pagination-bullet-active{
-    background:black; 
-}
+.swiper-pagination-bullet {
+    /* ... */
+    width: 12px;
+    height: 12px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #000000 !important;
+  }
 
 .article .mobil-show{
     display: none;
@@ -698,7 +704,47 @@ padding: 120px 0px;
     .mySwiper{
         display: none;
     }
-    .article .mobil-show{
-        display: block;
+    .article {
+        padding: 0px 12px;
+        .mySwiper {
+            .swiper-box{
+                img{
+                    border-radius: 8px;
+                }
+            }
+            h4{
+                padding: 0px 8px;
+            }
+        }
+        .mobil-show{
+            display: block;
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            .button{
+                font-size: 16px;
+                line-height: 24px;
+                padding: 8px 16px;
+                border-radius: 5px;
+            }
+        }
     }
+    
+    .swiper-wrapper{
+        padding-bottom: 0px;
+        flex-direction: column;
+    }
+    .swiper-wrapper .swiper-slide{
+       margin-bottom: 48px;
+    }
+    .swiper-slide :nth-child(4){
+        margin-bottom: 40px;
+     }
+
+     .swiper-wrapper :nth-child(n + 4){
+        display: none;
+     }
+     .swiper-pagination{
+        display: none !important;
+     }
 }
