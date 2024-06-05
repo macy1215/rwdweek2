@@ -230,7 +230,9 @@ body{
 .position-absolute{
   position:absolute;
 }
-
+.white-space{
+  white-space: break-spaces;
+}
 
 @media (max-width:1296px) {
   .container{

@@ -22,15 +22,14 @@ const routes = [
         component: () => import('../views/WorksView.vue'),
       },
       {
-        path: '/blog',
-        name: 'Blog',
+        path: '/blogs',
+        name: 'Blogs',
         component: () => import('../views/BlogsView.vue'),
-        children: [
-          {
-            path: 'blogContent',
-            component: () => import('../views/BlogContentView.vue'),
-          },
-        ],
+      },
+      {
+        path: 'blog/:id',
+        name: 'Article',
+        component: () => import('../views/BlogContentView.vue'),
       },
     ],
   },

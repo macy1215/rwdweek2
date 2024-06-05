@@ -1,0 +1,224 @@
+.blog-box{
+ padding: 120px 0px;
+ margin: 0px auto;   
+}
+
+@media (max-width:992px) {
+    .blog-box{
+        padding: 40px 12px 80px 12px;  
+       }
+}
+
+.blog-box{
+    .title-box{
+        margin: 0px auto;
+        max-width: 336px;
+        h2{
+            position: relative;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+        }
+        h2::before{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #C1C1C1;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            z-index: 0;
+        }
+        h2 +div{
+            padding-top: 24px;
+        }
+    }
+}
+
+
+@media (max-width:992px) {
+    .blog-box{
+        .title-box{
+            margin: 0px auto;
+            max-width: 222px;
+            h2 +div{
+                padding-top: 16px;
+            }
+        }
+        .title::before {
+            width: 6px;
+            height: 6px;
+            left:0%;
+            top: 50%;
+        }
+        .title::after {
+            width: 6px;
+            height: 6px;
+            right:0%;
+            top: 50%;
+        }
+   }   
+}
+
+.blog-content{
+    max-width: 1296px;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: 1 24px auto;
+    margin-top: 80px;
+}
+@media (max-width:992px) {
+    .blog-content{
+        max-width: 992px;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+}
+
+.col-blog-3{
+    min-width: 306px;
+}
+.col-blog-9{
+    max-width: 74.5%;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+@media (max-width:992px) {
+    .col-blog-9{
+        max-width: 100%;
+        gap: 40px;
+    }
+}
+
+.side-nav{
+    padding: 80px;
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 32px;
+        li{
+            a{
+                display: block;
+                color: rgba(91, 91, 91, 1);
+                position: relative;
+            }
+            a:hover{
+                color:rgba(30, 30, 30, 1);
+                &::after{
+                content: "";
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                width: 100%;
+                border-bottom: 1px solid rgba(30, 30, 30, 1);
+                }
+            }
+        }
+    }
+}
+@media (max-width:992px) {
+    .side-nav {
+        min-width: 375px;
+        margin: 0px auto;
+        padding: 24px 12px;
+        margin-left:-12px ;
+        .list{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            overflow-x: scroll;
+            white-space: nowrap;
+            gap: 32px;
+            &::-webkit-scrollbar {
+                display:none ;
+            }
+        }
+    }
+    
+}
+
+.card{
+    display: flex;
+    gap: 16px;
+    .card-img{
+        min-width: 306px;
+        height: 220px;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid rgba(241, 241, 241, 1);
+        img{
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+    }
+}
+@media (max-width:992px) {
+    .card{
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        .card-img{
+            max-width: 306px;
+            height: 220px;
+            img{
+                height: 100%;
+                object-fit: cover;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.card-body{
+    width: 100%;
+    padding: 0px;
+    div{
+        line-height: 24px;
+    }
+    h3{
+        padding: 16px 0px;
+        line-height: 24px;
+    }
+    h3 +div{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+    .tag{
+        background-color: rgba(241, 241, 241, 1);
+        padding: 4px 12px;
+        border-radius: 16px;
+        margin-left: 16px;
+    }
+}
+@media (max-width:992px) {
+    .card-body{
+        width: 100%;
+        padding: 0px 22.5px;
+        div{
+            line-height: 24px;
+        }
+        h3{
+            padding-top: 16px;
+            padding-bottom: 12px;
+        }
+        h3 +div{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+        .tag{
+            background-color: rgba(241, 241, 241, 1);
+            padding: 4px 12px;
+            border-radius: 16px;
+            margin-left: 16px;
+        }
+    }
+}

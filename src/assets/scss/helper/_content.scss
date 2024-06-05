@@ -1,0 +1,220 @@
+.article {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    margin: 0px auto;
+    justify-content: space-between;
+}
+@media (max-width:992px) {
+    .article {
+        padding-top: 0px;
+        padding-bottom: 40px;
+        flex-direction: column-reverse;
+    } 
+}
+.art-content{
+    max-width: 856px;
+    margin: 0px auto;
+    h2{
+        text-align: center;
+        font-weight: 600;
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    h3{
+        text-align: center;
+        padding-bottom: 64px;
+    }
+    .txtstyle{
+        line-height: 30px;
+        letter-spacing: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+@media (max-width:992px) {
+    .art-content{
+        margin: 0px auto;
+        padding-top: 32px;
+        padding-bottom: 0px;
+        h2{
+            font-size: 24px;
+            padding: 16px 11.5px;
+        }
+        h3{
+            text-align: center;
+            font-size: 16px;
+            padding-bottom: 24px;
+        }
+        .txtstyle{
+            line-height: 30px;
+            letter-spacing: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .txtstyle .p-box:last-child{
+            font-size: 16px;
+        }
+    }
+}
+.p-box{
+    h4{
+        padding-bottom: 16px;
+    }
+}
+.breadcrumb{
+    display: flex;
+}
+
+.breadcrumb span:nth-child(2) {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+@media (max-width:992px) {
+    .breadcrumb{
+        display: flex;
+        justify-content: space-between;
+    }
+    .breadcrumb span:nth-child(2) {
+        display: none;
+    }
+}
+
+.side-nav{
+    min-width: 306px;
+    padding: 80px;
+    .list{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        li{
+            a{
+                padding-bottom: 4px;
+            }
+            a:hover{
+                color: #1E1E1E;
+                border-bottom: 1px solid #1E1E1E;
+            }
+        }
+    }
+}
+@media (max-width:992px) {
+    .side-nav{
+        min-width: 375px;
+        padding: 20px 12px;
+        margin-left: -12px;
+        .list{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            overflow-x: scroll;
+            white-space: nowrap;
+            &::-webkit-scrollbar {
+                display:none ;
+            }
+        }
+    }
+}
+
+.atr-imgs{
+    flex-wrap: wrap;
+    gap: 24px;
+    .img-txt{
+        margin: 0px auto;
+        text-align: center;
+        font-size: 16px;
+        padding-top: 8px;
+    }
+}
+@media (max-width:992px) {
+    .atr-imgs{
+        gap: 32px;
+    }
+}
+
+
+.other-article {
+    border-top: 1px solid #C1C1C1;
+    padding-top: 80px;
+    padding-bottom: 120px;
+    h3{
+        padding-bottom: 40px;
+    }
+    ul{
+        display: flex;
+        justify-content: start;
+        gap: 24px;
+        li{
+            max-width: 416px;
+            a{
+                display: block;
+                height: 234px;
+            }
+            .mobil-title{
+                margin-top: 16px;
+            }
+            .img-style{
+                border-radius: 8px;
+                border: 1px solid #F1F1F1;
+                overflow: hidden;
+                object-fit: cover;
+            }
+            h4{
+                padding: 0px 8px;
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .other-article {
+        border-top: 1px solid #C1C1C1;
+        margin-left: 12px;
+        margin-right: 12px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        ul{
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            li{
+                max-width: 306px;
+                a{
+                    display: block;
+                    height: 220px;
+                    img{
+                        height: 100%;
+                    }
+                }
+                .mobil-title{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    h4{
+                        padding-top: 16px;
+                    }
+                }
+            }
+        }
+        h3{
+            text-align: center;
+        }
+    }
+}
+
+.tags{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 8px 0px 8px;
+    .tag-style{
+        padding: 4px 12px;
+        background-color: #F1F1F1;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width:992px) {
+    .tags{
+       flex-direction: row-reverse;
+    }
+}

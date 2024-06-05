@@ -38,7 +38,7 @@
           </RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink class="primary-800-color" aria-current="page" to="/blog"
+          <RouterLink class="primary-800-color" aria-current="page" to="/blogs"
             ><span>部落格</span>
           </RouterLink>
         </li>
