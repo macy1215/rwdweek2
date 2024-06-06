@@ -45,7 +45,7 @@ h1 {
 }
 
 // Nav list 
-.navbar-nav{
+.navbar-navList{
   display: flex;
   gap: 40px;
   .nav-item{
@@ -53,11 +53,12 @@ h1 {
       display: block;
       padding: 4px 8px;
       position: relative;
+      text-decoration: none;
     }
   }
 }
-.navbar-nav .nav-item a::before,
-.navbar-nav .nav-item a::after{
+.navbar-navList .nav-item a::before,
+.navbar-navList .nav-item a::after{
   content: "";
   position: absolute;
   width: 8px;
@@ -66,21 +67,21 @@ h1 {
   opacity: 0;
   -webkit-box-reflect: below 16px;
 }
-.navbar-nav .nav-item a::before{
+.navbar-navList .nav-item a::before{
   top: 0;
   left: 0;
   border-right: none;
   border-bottom: none;
 }
-.navbar-nav .nav-item a::after{
+.navbar-navList .nav-item a::after{
   top: 0;
   right: 0;
   border-left: none;
   border-bottom: none;
 }
 
-.navbar-nav .nav-item a:hover::before,
-.navbar-nav .nav-item a:hover::after{
+.navbar-navList .nav-item a:hover::before,
+.navbar-navList .nav-item a:hover::after{
   content: "";
   opacity: 1;
 }
@@ -116,7 +117,7 @@ h1 {
   .menu-btn{
     display: block;
   }
-  .navbar-nav{
+  .navbar-navList{
     display: none;
   }
   .menu-control:checked ~ .navbar-nav{

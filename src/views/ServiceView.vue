@@ -160,8 +160,8 @@
         </h2>
       </div>
       <ul class="works-row">
-        <li class="col-6 col-m-12">
-          <div class="card border-0">
+        <li class="col-my-6 col-m-12">
+          <div class="card-my border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image4.png?raw=true"
               class="card-img-top"
@@ -195,8 +195,8 @@
             </div>
           </div>
         </li>
-        <li class="col-6 col-m-12">
-          <div class="card border-0">
+        <li class="col-my-6 col-m-12">
+          <div class="card-my border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image5.png?raw=true"
               class="card-img-top"
@@ -230,8 +230,8 @@
             </div>
           </div>
         </li>
-        <li class="col-6 col-m-12">
-          <div class="card border-0">
+        <li class="col-my-6 col-m-12">
+          <div class="card-my border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image6.png?raw=true"
               class="card-img-top"
@@ -265,8 +265,8 @@
             </div>
           </div>
         </li>
-        <li class="col-6 col-m-12">
-          <div class="card border-0">
+        <li class="col-my-6 col-m-12">
+          <div class="card-my border-0">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image7.png?raw=true"
               class="card-img-top"
@@ -313,25 +313,25 @@
         </h2>
       </div>
       <div class="qa-list">
-        <div class="col-6 col-m-12 qa-item">
+        <div class="col-my-6 col-m-12 qa-item">
           <h4>時程很趕的話可以加快作業嗎？</h4>
           <div class="primary-600-color">
             每提早一天，只要支付總報價的 5%，我們即會視為急件為您趕工！
           </div>
         </div>
-        <div class="col-6 col-m-12 qa-item">
+        <div class="col-my-6 col-m-12 qa-item">
           <h4>白天可以開會討論嗎？</h4>
           <div class="primary-600-color">
             每週一三五的白天，可以約定開會時間！
           </div>
         </div>
-        <div class="col-6 col-m-12 qa-item">
+        <div class="col-my-6 col-m-12 qa-item">
           <h4>有實際開發的網站可以參考嗎？</h4>
           <div class="primary-600-color">
             請填寫表單或來信索取，部分合作有簽保密協定，無法於網路上公開喔。
           </div>
         </div>
-        <div class="col-6 col-m-12 qa-item">
+        <div class="col-my-6 col-m-12 qa-item">
           <h4>提供比稿服務嗎？</h4>
           <div class="primary-600-color">
             只要支付費用，設計提供比稿服務，但切版與前端開發恕不提供該服務內容。

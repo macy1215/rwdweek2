@@ -1,0 +1,33 @@
+
+.form-style{
+    padding: 80px 0px;
+    h2{
+        padding-bottom: 40px;
+        padding-left: 10%;
+    }
+}
+.form-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+.form-label{
+    margin-bottom: 8px;
+    display: block;
+}
+.form-control{
+    border: 1px solid #c6c2c2;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.invalid-feedback{
+    color: rgb(215, 3, 3);
+}
+
+.ckebock label~label{
+    padding-left: 24px;
+}
+.ckebock label:nth-child(2){
+    padding-left: 0px;
+}

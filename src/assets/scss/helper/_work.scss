@@ -115,21 +115,24 @@
   display: flex;
   flex-grow: 0.5;
 }
-.card-img-top{
-  outline: 1px solid #F1F1F1;
-  border-radius: 8px;
-}
-.card-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.card-body {
-  padding: 16px;
-  .card-text{
-    margin-top: 8px;
+.card-my{
+  .card-img-top{
+    outline: 1px solid #F1F1F1;
+    border-radius: 8px;
+  }
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  .card-body {
+    padding: 16px;
+    .card-text{
+      margin-top: 8px;
+    }
   }
 }
+
 
 .card-round-btn {
   margin-top: 24px;
@@ -233,12 +236,15 @@
   flex-direction: column;
   padding: 40px 32.5px;
  }
- .card-title {
-  font-size: 1.25rem;
-}
- .card-round-btn {
-  gap: 8px;
-}
+ .card-my{
+  .card-title {
+    font-size: 1.25rem;
+  }
+   .card-round-btn {
+    gap: 8px;
+  }
+ }
+
  .works-item {
   width: 100%;
   justify-content: space-evenly;

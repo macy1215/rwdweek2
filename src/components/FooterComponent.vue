@@ -11,16 +11,17 @@
             <p>歡迎填寫表單，或直接與我聯絡！</p>
           </div>
           <div>
-            <a
+            <RouterLink
+              :to="`/contact`"
               href="service@hexschool.com?bcc=service@hexschool.com"
               class="fs-5 primary-500-color lh-12 fs-md-6"
-              >service@hexschool.com</a
-            >
+              >service@hexschool.com
+            </RouterLink>
           </div>
         </div>
         <div class="box-in">
           <ul>
-            <RouterLink to="/">
+            <RouterLink to="/contact">
               <li class="form primary-bg-black-color">
                 <img
                   src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/list.svg"

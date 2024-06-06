@@ -2,8 +2,8 @@
   <!-- Banner -->
   <div class="banner-bg">
     <div class="container">
-      <div class="row banner-home">
-        <div class="col-4 col-m-12">
+      <div class="banner-home">
+        <div class="col-my-4 col-m-12">
           <h2 class="fw-bold fs-1 lh-12 primary-700-color">Hi！我是 Noel</h2>
           <div class="mt-4 primary-600-color fs-5 mobil-layout">
             <span>具有 10 年經驗的</span>
@@ -61,8 +61,10 @@
     <div class="content-body">
       <div class="box-1">
         <div class="container h-100">
-          <div class="row justify-content-space-between mobil-flex-dir">
-            <div class="col-7 col-m-12">
+          <div
+            class="box-row justify-content-space-between mobil-flex-dir h-100"
+          >
+            <div class="col-my-7 col-m-12">
               <div class="box-product h-100 position-relative">
                 <img
                   src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1.png?raw=true"
@@ -72,7 +74,7 @@
               </div>
             </div>
             <div
-              class="col-5 row align-items-center justify-content-center col-m-12"
+              class="col-5 box-row align-items-center justify-content-center col-m-12"
             >
               <div class="box-content">
                 <h4 class="fs-3 primary-white-color">星際旅行訂票平台</h4>
@@ -101,10 +103,10 @@
       <div class="box-2">
         <div class="container h-100">
           <div
-            class="row justify-content-space-between align-items-stretch mobil-flex-dir"
+            class="box-row justify-content-space-between align-items-stretch mobil-flex-dir h-100"
           >
             <div
-              class="col-5 col-m-12 row align-items-center justify-content-center col-m-12"
+              class="col-5 col-m-12 box-row align-items-center justify-content-center col-m-12"
             >
               <div class="box-content">
                 <h4 class="fs-3 primary-white-color">理財APP</h4>
@@ -140,7 +142,9 @@
       </div>
       <div class="box-3">
         <div class="container h-100">
-          <div class="row justify-content-space-between mobil-flex-dir h-100">
+          <div
+            class="box-row justify-content-space-between mobil-flex-dir h-100"
+          >
             <div class="col-7 col-m-12">
               <div class="box-product-3">
                 <img
@@ -188,7 +192,7 @@
         </h3>
       </div>
       <div class="content-body">
-        <ul class="row">
+        <ul>
           <li>
             <a
               href="#"
@@ -240,7 +244,7 @@
         </ul>
         <div class="p-t-80">
           <div class="fs-3 text-center">想要合作或瞭解更多？</div>
-          <div class="mt-40 row justify-content-center">
+          <div class="mt-40 box-row justify-content-center">
             <button
               type="button"
               class="button primary-bg-black-color primary-white-color fs-5 margin-0-auto"
@@ -294,7 +298,7 @@
                 <span
                   ><a
                     href="#"
-                    class="primary-700-color primary-bg-200-color"
+                    class="primary-700-color primary-bg-200-color round-pill"
                     @click.prevent="linkClick"
                     >{{ item.tag.tag1 }}</a
                   >

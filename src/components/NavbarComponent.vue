@@ -18,7 +18,7 @@
       </label>
 
       <!-- NAVLIST-->
-      <ul class="navbar-nav">
+      <ul class="navbar-navList">
         <li class="nav-item">
           <RouterLink class="primary-800-color" aria-current="page" to="/"
             ><span>首頁</span>
@@ -43,7 +43,10 @@
           </RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink class="primary-800-color" aria-current="page" to="/"
+          <RouterLink
+            class="primary-800-color"
+            aria-current="page"
+            to="/contact"
             >聯絡我
           </RouterLink>
         </li>

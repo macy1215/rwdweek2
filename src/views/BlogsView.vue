@@ -7,37 +7,70 @@
         </h2>
         <div class="fs-6 text-center primary-500-color">不定期分享技術文章</div>
       </div>
-      <div class="blog-content row">
+      <div class="blog-content">
         <div class="col-blog-9 col-m-12">
-          <template v-for="(item, idx) in articles" :key="idx">
-            <div class="card">
-              <div class="card-img">
-                <RouterLink :to="`blog/${articles.id}`">
-                  <img :src="item.imgUrl" :alt="item.title" />
-                </RouterLink>
-              </div>
-              <div class="card-body">
-                <div class="primary-600-color">
-                  <span>{{ item.date }}</span>
-                  <span class="tag">{{ item.category }}</span>
+          <div class="article-show" v-if="filteredArticles.length !== 0">
+            <template v-for="(item, idx) in filteredArticles" :key="idx">
+              <div class="card-style">
+                <div class="cardImg">
+                  <RouterLink :to="`blog/${articles.id}`">
+                    <img :src="item.imgUrl" :alt="item.title" />
+                  </RouterLink>
                 </div>
-                <h3 class="fs-5 fw-bold">
-                  {{ item.title }}
-                </h3>
-                <div class="primary-700-color white-space">
-                  {{ wrapNext(item.content) }}
+                <div class="cardBody">
+                  <div class="primary-600-color">
+                    <span>{{ item.date }}</span>
+                    <span class="tag">{{ item.category }}</span>
+                  </div>
+                  <h3 class="fs-5 fw-bold">
+                    {{ item.title }}
+                  </h3>
+                  <div class="primary-700-color white-space">
+                    {{ wrapNext(item.content) }}
+                  </div>
                 </div>
               </div>
-            </div>
-          </template>
+            </template>
+          </div>
+          <div v-else>
+            <h5 class="fs-5">目前還沒有文章唷！</h5>
+          </div>
         </div>
         <div class="col-blog-3 col-m-12 primary-bg-100-color side-nav">
           <ul class="list">
-            <li><a href="#">全部文章</a></li>
-            <li><a href="#">UI/UX 新知</a></li>
-            <li><a href="#">數位產品設計</a></li>
-            <li><a href="#">平面設計</a></li>
-            <li><a href="#">前端開發</a></li>
+            <li>
+              <RouterLink :to="`/blogs`" @click="selectCategory(null)"
+                >全部文章</RouterLink
+              >
+            </li>
+            <li>
+              <RouterLink
+                :to="`/blogs/UIUX新知`"
+                @click="selectCategory('UI/UX 新知')"
+                >UI/UX 新知</RouterLink
+              >
+            </li>
+            <li>
+              <RouterLink
+                :to="`/blogs/數位產品設計`"
+                @click="selectCategory('數位產品設計')"
+                >數位產品設計</RouterLink
+              >
+            </li>
+            <li>
+              <RouterLink
+                :to="`/blogs/平面設計`"
+                @click="selectCategory('平面設計')"
+                >平面設計</RouterLink
+              >
+            </li>
+            <li>
+              <RouterLink
+                :to="`/blogs/前端開發`"
+                @click="selectCategory('前端開發')"
+                >前端開發</RouterLink
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -49,6 +82,8 @@
 export default {
   data() {
     return {
+      selectedCategory: null,
+      // article 是我的資料 data
       articles: [
         {
           id: '001',
@@ -111,12 +146,40 @@ export default {
             '在當今快速發展的前端開發領域中，React和Vue被廣泛認為是兩個最受歡迎和強大的前端框架之一。然而，對於開發人員來說，選擇適合自己的框架可能是一個具有挑戰性的決定。本文將從三個主要面向探討React和Vue：開發效率、性能和生態系統。通過深入比較和分析這些方面，我們將試圖回答一個關鍵問題：React和Vue中哪種前端框架更加適用？這將有助於開發人員更好地理解兩者之間的優勢和劣勢，並在實際應用中做出明智...',
         },
       ],
+      newArticles: [],
+      // category: ['全部文章', 'UI/UX 新知', '前端開發', '數位產品設計'],
     };
   },
+  computed: {
+    // 新的資料產出
+    filteredArticles() {
+      if (this.selectedCategory) {
+        return this.articles.filter(
+          (article) => article.category === this.selectedCategory,
+        );
+      }
+      return this.articles;
+    },
+  },
+  // watch: {
+  //   '$route.query': {
+  //     handler(n, o) {
+  //       // 路由變化時，會重新取值
+  //       console.log('test change', n, o);
+  //       this.getNewArtcle();
+  //     },
+  //     deep: true,
+  //     immediate: true,
+  //   },
+  //   selectedCategory: {},
+  // },
   methods: {
     // 確認 \n 斷行
     wrapNext(str) {
       return str.replace(/<br>/g, '\n');
+    },
+    selectCategory(item) {
+      this.selectedCategory = item;
     },
   },
   mounted() {},

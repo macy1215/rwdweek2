@@ -8,28 +8,38 @@ const routes = [
     children: [
       {
         path: '/',
-        name: 'Home',
+        name: '首頁',
         component: () => import('../views/HomeView.vue'),
       },
       {
         path: '/service',
-        name: 'Service',
+        name: '服務項目',
         component: () => import('../views/ServiceView.vue'),
       },
       {
         path: '/works',
-        name: 'Works',
+        name: '作品集',
         component: () => import('../views/WorksView.vue'),
       },
       {
         path: '/blogs',
-        name: 'Blogs',
+        name: '部落格',
         component: () => import('../views/BlogsView.vue'),
       },
       {
-        path: 'blog/:id',
-        name: 'Article',
+        path: '/blogs/:category',
+        name: '部落格分類',
+        component: () => import('../views/BlogsView.vue'),
+      },
+      {
+        path: '/blog/:id',
+        name: '部落格文章',
         component: () => import('../views/BlogContentView.vue'),
+      },
+      {
+        path: '/contact',
+        name: '聯絡我',
+        component: () => import('../views/ContactView.vue'),
       },
     ],
   },

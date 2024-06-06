@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+  }
 .banner-bg{
     background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-lg.png?raw=true');
     background-size: contain;
@@ -7,6 +10,7 @@
 .banner-home{
     height: 100%;
     padding: 248px 0px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -69,7 +73,7 @@
 }
 .mark-pos1{
     position: absolute;
-    bottom: 52%;
+    bottom: 53%;
     left: 146px;
     z-index: -1;
     width: 148px;
@@ -268,6 +272,9 @@ a {
 }
 
 // 設計 Banner Box1
+.box-row{
+    display: flex;
+}
 .box-1{
     height: 800px;
     background-color: rgba(39, 39, 39, 1);
@@ -602,17 +609,19 @@ a {
 
 // 服務項目
 .serve-bg{
-padding: 120px 0px;
+    padding: 120px 0px;
     background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-services-bg.png?raw=true');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     ul{
+        display: flex;
         justify-content: space-between;
         gap: 24px;
     }
     .content-body{
         .button{
+            width: 276px;
             padding: 16px 32px;
             border-radius: 5px;
         }
@@ -686,6 +695,10 @@ padding: 120px 0px;
     display: flex;
     justify-content: space-between;
     padding-top: 16px;
+    .round-pill{
+        padding: 4px 12px;
+        border-radius: 16px;
+    }
 }
 
 .swiper-pagination-bullet {
