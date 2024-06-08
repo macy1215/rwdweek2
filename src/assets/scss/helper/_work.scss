@@ -116,9 +116,20 @@
   flex-grow: 0.5;
 }
 .card-my{
-  .card-img-top{
+  overflow: hidden;
+  .img-box{
     outline: 1px solid #F1F1F1;
     border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+  }
+  .card-img-top{
+    cursor: pointer;
+    height: 100%;
+  }
+  .card-img-top:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s 0s ease-in-out;
   }
   .card-title {
     font-size: 1.4rem;
@@ -255,4 +266,28 @@
 .page-box {
   padding-top: 48px;
 }
+}
+
+// modal 樣式
+.modal-dialog{
+    max-width: 1076px !important;
+    .modal-header{
+      padding-top: 32px;
+      padding-bottom: 0px;
+    }
+    .header-box{
+      padding: 40px 30px;
+    }
+    .modal-body{
+      padding: 80px 177px;
+      .modal-img{
+        border-radius: 20px;
+      }
+      .modal-body-title{
+        padding-top: 28px;
+      }
+    }
+}
+.modal-body div +div{
+  margin-top: 56px;
 }

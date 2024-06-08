@@ -56,11 +56,87 @@
       <ul class="works-row">
         <li class="col-my-6 col-m-12 works-item">
           <div class="card-my border-0">
-            <img
-              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image1.png?raw=true"
-              class="card-img-top"
-              alt="work1"
-            />
+            <div class="img-box">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image1.png?raw=true"
+                class="card-img-top"
+                alt="work1"
+                @click="openModal()"
+              />
+            </div>
+            <div class="modal fade" tabindex="-1" ref="ItemModal">
+              <div class="modal-dialog">
+                <div class="modal-content border-0">
+                  <div class="modal-header flex-column">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                      @click="hideModal"
+                    ></button>
+                    <div class="header-box">
+                      <h5
+                        class="modal-title fs-3 d-flex justify-content-center pb-2"
+                      >
+                        星際旅行訂票平台
+                      </h5>
+                      <p class="text-center primary-500-color fs-6">
+                        遊宇宙的夢想，從這裡開始實現
+                      </p>
+                      <div class="row d-flex justify-content-between">
+                        <div class="col-my-7 pe-3">
+                          STAR TRAVEL 為 KK 公司宇宙旅行的購票網站。<br />
+                          主要從地球出發，目的地包含月球、火星、水星、木星；未來太空轉運站建置完畢，將再擴增目的地土星和金星。
+                        </div>
+                        <div
+                          class="col-my-5 ps-4 border-start d-flex flex-column justify-content-center"
+                        >
+                          <p class="mb-2">
+                            設計原則：宇宙旅行、深色背景、強烈視覺效果
+                          </p>
+                          <p class="mb-2">
+                            開發方式：Bootstrap、Javascript、RWD
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-body">
+                    <div>
+                      <img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/modal-image1.png?raw=true"
+                        alt=""
+                        class="modal-img"
+                      />
+                      <h4
+                        class="text-center modal-body-title fs-4 fw-bold primary-800-color"
+                      >
+                        主視覺
+                      </h4>
+                      <div class="text-center primary-600-color pt-2">
+                        可直接設定日期、起迄星球、張數，快速查詢可購買的票券。
+                      </div>
+                    </div>
+                    <div>
+                      <img
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/modal-image2.png?raw=true"
+                        alt=""
+                        class="modal-img"
+                      />
+                      <h4
+                        class="text-center modal-body-title fs-4 fw-bold primary-800-color"
+                      >
+                        推薦查詢
+                      </h4>
+                      <div class="text-center primary-600-color pt-2">
+                        給予最快起飛，以及最熱門的景點推薦，協助使用者進行選擇。
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="card-body">
               <h2 class="card-title lh-12">星際旅行訂票平台</h2>
               <p class="card-text primary-500-color">
@@ -88,96 +164,17 @@
               </div>
             </div>
             <!-- Modal -->
-            <!-- <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content modal-style">
-                  <div class="modal-header flex-column">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <h5
-                      class="modal-title fs-3 lh-12 text-center mb-1"
-                      id="modalTitle"
-                    >
-                      星際旅行訂票平台
-                    </h5>
-                    <p class="text-center gray-500 lh-base">
-                      悠遊宇宙的夢想，從這裡開始實現
-                    </p>
-                    <div class="row my-40 mx-56">
-                      <div class="col-7 p-0">
-                        <p class="fs-6 mb-0 lh-base">
-                          STAR TRAVEL 為 KK 公司宇宙旅行的購票網站。
-                        </p>
-                        <p class="fs-6 mb-0 lh-base">
-                          主要從地球出發，目的地包含月球、火星、水星、木星；未來太空轉運站建置完畢，將再擴增目的地土星和金星。
-                        </p>
-                      </div>
-                      <div
-                        class="col-5 lh-base d-flex flex-column justify-content-center"
-                      >
-                        <p class="fs-6 mb-0 lh-base pb-2 gray-600">
-                          設計原則：宇宙旅行、深色背景、強烈視覺效果
-                        </p>
-                        <p class="fs-6 mb-0 lh-base gray-600">
-                          開發方式：Bootstrap、Javascript、RWD
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <div class="workBox gray-bg-100">
-                      <div class="mb-56">
-                        <img
-                          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/modal-image1.png?raw=true"
-                          alt="work1"
-                          class="border5"
-                        />
-                        <div class="mt-4">
-                          <h4 class="text-center fs-4 mb-3">主視覺</h4>
-                          <p class="text-center gray-600 mb-0">
-                            可直接設定日期、起迄星球、張數，快速查詢可購買的票券。
-                          </p>
-                        </div>
-                      </div>
-                      <div>
-                        <img
-                          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/modal-image2.png?raw=true"
-                          alt="work2"
-                          class="border5"
-                        />
-                        <div class="mt-4">
-                          <h4 class="text-center fs-4 mb-3">推薦查詢</h4>
-                          <p class="text-center gray-600">
-                            給予最快起飛，以及最熱門的景點推薦，協助使用者進行選擇。
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </li>
         <li class="col-my-6 col-m-12 works-item">
           <div class="card-my border-0">
-            <img
-              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image2.png?raw=true"
-              class="card-img-top"
-              alt="work2"
-            />
+            <div class="img-box">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image2.png?raw=true"
+                class="card-img-top"
+                alt="work2"
+              />
+            </div>
             <div class="card-body">
               <h2 class="card-title lh-12">理財App</h2>
               <p class="card-text primary-500-color">
@@ -208,11 +205,14 @@
         </li>
         <li class="col-my-6 col-m-12 works-item">
           <div class="card-my border-0">
-            <img
-              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image3.png?raw=true"
-              class="card-img-top"
-              alt="work3"
-            />
+            <div class="img-box">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image3.png?raw=true"
+                class="card-img-top"
+                alt="work3"
+              />
+            </div>
+
             <div class="card-body">
               <h2 class="card-title lh-12">醫美診所官網</h2>
               <p class="card-text primary-500-color">
@@ -243,11 +243,14 @@
         </li>
         <li class="col-my-6 col-m-12 works-item">
           <div class="card-my border-0">
-            <img
-              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image4.png?raw=true"
-              class="card-img-top"
-              alt="work4"
-            />
+            <div class="img-box">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image4.png?raw=true"
+                class="card-img-top"
+                alt="work4"
+              />
+            </div>
+
             <div class="card-body">
               <h2 class="card-title fw-bold">美美美早餐店 POS 機 UI Design</h2>
               <p class="card-text primary-500-color">
@@ -278,11 +281,14 @@
         </li>
         <li class="col-my-6 col-m-12 works-item">
           <div class="card-my border-0">
-            <img
-              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image5.png?raw=true"
-              class="card-img-top"
-              alt="work5"
-            />
+            <div class="img-box">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image5.png?raw=true"
+                class="card-img-top"
+                alt="work5"
+              />
+            </div>
+
             <div class="card-body">
               <h2 class="card-title lh-12">電影院訂票系統</h2>
               <p class="card-text primary-500-color">
@@ -313,11 +319,14 @@
         </li>
         <li class="col-my-6 col-m-12 works-item">
           <div class="card-my border-0">
-            <img
-              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image6.png?raw=true"
-              class="card-img-top"
-              alt="work6"
-            />
+            <div class="img-box">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image6.png?raw=true"
+                class="card-img-top"
+                alt="work6"
+              />
+            </div>
+
             <div class="card-body">
               <h2 class="card-title lh-12">巧克巧克形象官網設計</h2>
               <p class="card-text primary-500-color">
@@ -367,11 +376,14 @@
 </template>
 
 <script>
-// import Modal from 'bootstrap/js/dist/modal';
+import { Modal } from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 export default {
   data() {
     return {
+      myModal: null,
       cardDetail: null,
     };
   },
@@ -379,9 +391,18 @@ export default {
     linkClick(e) {
       e.preventDefault();
     },
+    openModal() {
+      this.myModal.show();
+    },
+    hideModal() {
+      this.myModal.hide();
+    },
   },
   mounted() {
-    // this.cardDetail = new Modal(this.$refs.cardDetail, {});
+    this.myModal = new Modal(this.$refs.ItemModal, {
+      keyboard: false,
+      backdrop: 'static',
+    });
   },
 };
 </script>
