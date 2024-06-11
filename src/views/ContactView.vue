@@ -3,8 +3,9 @@
     <div class="form-style">
       <h2 class="fs-2 fw-bold primary-700-color">請填寫聯絡表單</h2>
       <VeeForm
-        @submit="onSubmit"
-        v-slot="{ errors, resetForm }"
+        ref="form"
+        @submit.prevent="onSubmit"
+        v-slot="{ errors }"
         class="form-row row gx-5"
       >
         <div class="col-12">
@@ -12,7 +13,6 @@
             >公司 or 個人單位名稱</label
           >
           <VeeField
-            field
             id="name"
             name="名稱"
             type="text"
@@ -20,6 +20,7 @@
             :class="{ 'is-invalid': errors['名稱'] }"
             placeholder="請輸入公司或個人單位名稱"
             rules="required"
+            v-model="form.user.companyName"
           ></VeeField>
           <ErrorMessage
             name="名稱"
@@ -34,7 +35,6 @@
             >聯絡人</label
           >
           <VeeField
-            field
             id="contactPerson"
             name="聯絡人"
             type="text"
@@ -42,6 +42,7 @@
             :class="{ 'is-invalid': errors['聯絡人'] }"
             placeholder="請輸入聯絡人"
             rules="required"
+            v-model="form.user.contactPerson"
           ></VeeField>
           <ErrorMessage
             name="聯絡人"
@@ -54,7 +55,6 @@
             >電話</label
           >
           <VeeField
-            field
             id="phone"
             name="phone"
             type="email"
@@ -62,6 +62,7 @@
             :class="{ 'is-invalid': errors['phone'] }"
             placeholder="請輸入電話號碼"
             :rules="isPhone"
+            v-model="form.user.phone"
           ></VeeField>
           <ErrorMessage
             name="phone"
@@ -74,7 +75,6 @@
             >Email 電子信箱</label
           >
           <VeeField
-            field
             id="email"
             name="email"
             type="email"
@@ -82,6 +82,7 @@
             :class="{ 'is-invalid': errors['email'] }"
             placeholder="請輸入 Email"
             rules="email|required"
+            v-model="form.user.email"
           ></VeeField>
           <ErrorMessage
             name="email"
@@ -94,7 +95,6 @@
             >預算</label
           >
           <VeeField
-            field
             id="price"
             name="預算"
             class="form-control"
@@ -102,6 +102,7 @@
             placeholder="請輸入預算"
             rules="required"
             as="select"
+            v-model="form.user.price"
           >
             <option value="">請選擇預算</option>
             <option value="3萬以下">3萬以下</option>
@@ -115,58 +116,68 @@
           <label for="needed" class="form-label w-100 primary-600-color fs-5"
             >服務需求</label
           >
+
           <VeeField
-            field
             id="needed"
             name="服務需求"
-            type="checkedbox"
+            value="5"
+            type="checkbox"
             class="form-control d-flex"
             :class="{ 'is-invalid': errors['服務需求'] }"
             placeholder="請勾選服務需求"
             rules="required"
           >
-            <label>
-              <input
+            <label class="form-check-label">
+              <VeeField
+                class="form-check-input"
                 type="checkbox"
                 name="gender"
-                v-bind="field"
-                value="webdesign"
+                value="網站設計"
+                rules="required"
+                v-model="form.user.services.isCheck1"
               />
               網站設計
             </label>
             <label>
-              <input
+              <VeeField
+                class="form-check-input"
                 type="checkbox"
                 name="gender"
-                v-bind="field"
-                value="coding"
+                value="程式設計"
+                rules="required"
+                v-model="form.user.services.isCheck2"
               />
               程式設計
             </label>
             <label>
-              <input
+              <VeeField
+                class="form-check-input"
                 type="checkbox"
                 name="gender"
-                v-bind="field"
-                value="port"
+                rules="required"
+                value="主機/網址相關資訊"
+                v-model="form.user.services.isCheck3"
               />
               主機/網址相關資訊
             </label>
             <label>
-              <input
+              <VeeField
+                class="form-check-input"
                 type="checkbox"
                 name="gender"
-                v-bind="field"
-                value="marketing"
+                rules="required"
+                value="行銷服務相關諮詢"
+                v-model="form.user.services.isCheck4"
               />
               行銷服務相關諮詢
             </label>
             <label>
-              <input
+              <VeeField
+                class="form-check-input"
                 type="checkbox"
                 name="gender"
-                v-bind="field"
-                value="other"
+                value="其他問題"
+                v-model="form.user.services.isCheck5"
               />
               其他問題
             </label>
@@ -189,7 +200,11 @@
           ></textarea>
         </div>
         <div class="col-md-12">
-          <button class="btn btn-outline-dark" @click="resetForm">
+          <button
+            class="btn btn-outline-dark"
+            type="submit"
+            @click="onSubmit()"
+          >
             送出表單
           </button>
         </div>
@@ -203,15 +218,21 @@ import Swal from 'sweetalert2';
 import 'axios';
 
 export default {
-  date() {
+  data() {
     return {
       form: {
         user: {
-          componeyname: '',
+          companyName: '',
           contactPerson: '',
           email: '',
           phone: '',
-          needed: '',
+          services: {
+            isCheck1: false,
+            isCheck2: false,
+            isCheck3: false,
+            isCheck4: false,
+            isCheck5: false,
+          },
           price: '',
         },
         message: '',
@@ -225,19 +246,25 @@ export default {
         ? true
         : '請輸入以「09」開頭的行動電話號碼';
     },
+    isServise(value) {
+      if (value && value.length) {
+        return true;
+      }
+      return '請幫我至少勾選一個';
+    },
     onSubmit() {
       Swal.fire({
-        title: 'Hello!',
-        text: 'This is a SweetAlert2 alert.',
+        position: 'center',
+        title: '謝謝您的來信，將有專員與您聯繫',
+        text: '工作日1-3日回覆',
         icon: 'success',
         confirmButtonText: 'Cool',
-        // }).then((result) => {
-        //   const infor = this.form;
-        //   const url = 'https://todolist-fc06.onrender.com/todos';
-        //   axios.post(url, { data: infor });
+        timer: 1500,
       });
+      setTimeout(() => {
+        this.$router.push('/');
+      }, 2000);
     },
-    resetForm() {},
   },
 };
 </script>
@@ -246,3 +273,18 @@ export default {
 @import 'bootstrap/scss/bootstrap.scss';
 @import '../assets/scss/helper/_contact.scss';
 </style>
+
+<!-- {
+  "companyName":"花花",
+  "contactPerson":"阿明",
+  "email":"123@gmail.com",
+  "phone": "0911111111",
+  "services":{
+          "isCheck1": false,
+          "isCheck2": false,
+          "isCheck3": false,
+          "isCheck4": false,
+          "isCheck5": false
+        },
+  "message":""
+} -->
