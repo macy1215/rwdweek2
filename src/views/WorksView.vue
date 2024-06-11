@@ -85,18 +85,19 @@
                         遊宇宙的夢想，從這裡開始實現
                       </p>
                       <div class="row d-flex justify-content-between">
-                        <div class="col-my-7 pe-3">
+                        <div class="col-my-7 col-m-12 pe-md-3 p-0">
                           STAR TRAVEL 為 KK 公司宇宙旅行的購票網站。<br />
                           主要從地球出發，目的地包含月球、火星、水星、木星；未來太空轉運站建置完畢，將再擴增目的地土星和金星。
                         </div>
                         <div
-                          class="col-my-5 ps-4 border-start d-flex flex-column justify-content-center"
+                          class="col-my-5 col-m-12 ps-md-4 mt-4 pt-4 d-flex flex-column justify-content-center primary-600-color"
                         >
                           <p class="mb-2">
-                            設計原則：宇宙旅行、深色背景、強烈視覺效果
+                            <span>設計原則：</span
+                            >宇宙旅行、深色背景、強烈視覺效果
                           </p>
                           <p class="mb-2">
-                            開發方式：Bootstrap、Javascript、RWD
+                            <span>開發方式：</span>Bootstrap、Javascript、RWD
                           </p>
                         </div>
                       </div>
@@ -114,7 +115,9 @@
                       >
                         主視覺
                       </h4>
-                      <div class="text-center primary-600-color pt-2">
+                      <div
+                        class="text-md-center text-start primary-600-color pt-2"
+                      >
                         可直接設定日期、起迄星球、張數，快速查詢可購買的票券。
                       </div>
                     </div>
@@ -129,7 +132,9 @@
                       >
                         推薦查詢
                       </h4>
-                      <div class="text-center primary-600-color pt-2">
+                      <div
+                        class="text-md-center text-start primary-600-color pt-2"
+                      >
                         給予最快起飛，以及最熱門的景點推薦，協助使用者進行選擇。
                       </div>
                     </div>

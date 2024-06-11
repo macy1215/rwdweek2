@@ -53,6 +53,9 @@
       </div>
     </div>
   </footer>
+  <div class="primary-bg-500-color primary-white-color footer-text">
+    此為切版學習作品，非商業用途之網頁。網頁功能皆使用模擬測試方式進行。
+  </div>
 </template>
 
 <script>

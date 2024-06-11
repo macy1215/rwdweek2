@@ -87,22 +87,15 @@ a{
 }
 
 @media (max-width:992px) {
-    .banner .col-4{
+    .banner-home .col-my-4{
         padding: 40px 53.5px;
         margin: 0px auto;
         h2{
             font-size: 32px;
             text-align: center;
         }
-        .mobil-layout{
-            text-align: center;
-        }
         .mobil-layout span:nth-child(2){
             padding-left: 0px;
-        }
-        .mobil-layout span:nth-child(5){
-            display: block;
-            text-align: center;
         }
         .mark-pos1{
             position: absolute;
@@ -122,6 +115,10 @@ a{
         text-align: center;
     }
     .mobil-layout ~div{
+        text-align: center;
+    }
+    .mobil-layout span:nth-child(5){
+        display: block;
         text-align: center;
     }
 }
@@ -542,6 +539,7 @@ a {
         }
         .box-product-3{
             height: 390px;
+            background-color: rgba(13, 12, 7, 0.5);
             position:relative;
             top: 0px;
             img{
@@ -550,13 +548,19 @@ a {
             }
         }
     }
+    .box-3::before{
+        content: "";
+        background-color: rgba(13, 12, 7, 0);
+        background-repeat: no-repeat;
+        position: absolute;
+    }
 }
 @media (max-width:992px) {
     .box-3{
         .box-content{
             background-color: rgb(255, 255, 255);
             border-radius: 0px;
-            padding: 24px 24px 0px 24px;
+            padding: 26px 24px 0px 24px;
             
             height: auto;
             h4{

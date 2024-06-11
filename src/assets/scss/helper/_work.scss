@@ -3,10 +3,18 @@
   padding: 80px 0px;
   width: 670px;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .banner-con{
     width: 100%;
     padding: 40px 37.5px;
+    .bannerp-style2{
+      padding-top: 8px;
+      p{
+        font-size: 1.25rem;
+        line-height: 1.5;
+        padding: 0px 6%;
+      }
+    }
   }
 }
 .content-box {
@@ -26,7 +34,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .content-box{
     display: flex;
     flex-direction: column;
@@ -42,7 +50,8 @@
   }
 }
 
-  .bannerp-style2{
+
+.bannerp-style2{
     padding-top: 16px;
     position: relative;
     img{
@@ -52,7 +61,7 @@
       position: relative;
       line-height: 1.2;
     }
-  }
+}
 
 .quo-left {
   top: 0px;
@@ -76,6 +85,27 @@
   z-index: 2;
 }
 
+@media (max-width:992px) {
+  .quo-left {
+    width: 64px;
+  }
+  .quo-right {
+    display: none;
+  }
+  .mark-01 {
+    top: 54%;
+    right: 15%;
+    width: 38%;
+  }
+  
+  .mark-02 {
+    bottom: 22%;
+    right: 17%;
+    width: 38%;
+  }
+}
+
+
 .banner-bottom{
   display: flex;
   align-items: center;
@@ -85,6 +115,15 @@
   padding: 24px 12px 0px 12px;
   text-align: justify;
 }
+
+@media (max-width:992px) {
+  .banner-bottom{
+    flex-direction: column;
+    padding: 40px 32.5px;
+   }
+}
+
+
 .bottom-box{
   text-align: center;
   p{
@@ -99,7 +138,14 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+@media (max-width:992px) {
+  .bottom-box{
+    text-align: center;
+    p{
+      margin: 0px;
+    }
+  }
+}
 .works {
   padding: 120px 0px;
 }
@@ -115,6 +161,21 @@
   display: flex;
   flex-grow: 0.5;
 }
+
+@media (max-width:992px) {
+  .works{
+    padding: 80px 0px;
+    .works-row {
+      gap: 48px;
+      padding: 0px;
+    }
+  }
+   .works-item {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
 .card-my{
   overflow: hidden;
   .img-box{
@@ -140,6 +201,23 @@
     padding: 16px;
     .card-text{
       margin-top: 8px;
+    }
+  }
+}
+@media (max-width:992px) {
+  .card-my{
+    .card-title {
+      font-size: 1.25rem;
+    }
+     .card-round-btn {
+      display: flex;
+      // justify-content: space-evenly;
+      gap: 8px;
+    }
+   }
+   .card-my{
+    .img-box{
+      height: 224px;
     }
   }
 }
@@ -202,7 +280,7 @@
 }
 @media (max-width: 1200px) {
   .works{
-    padding: 80px 12px;
+    padding: 80px 0px;
   }
   
   .footer{
@@ -213,67 +291,20 @@
   }
 }
 
-@media (max-width: 767px) {
-  .banner-con{
-      .bannerp-style2{
-        padding-top: 8px;
-        p{
-          font-size: 1.25rem;
-          line-height: 1.5;
-          padding: 0px 6%;
-        }
-      }
-    }
-  
-
-  .quo-left {
-    width: 64px;
+@media (max-width: 992px) {
+  .page-box {
+    padding-top: 48px;
   }
-  .quo-right {
-    display: none;
-  }
-  .mark-01 {
-    top: 63%;
-    right: 23%;
-    width: 38%;
-  }
-  
-  .mark-02 {
-    bottom: 3%;
-    right: 23%;
-    width: 38%;
-  }
- .banner-bottom{
-  flex-direction: column;
-  padding: 40px 32.5px;
- }
- .card-my{
-  .card-title {
-    font-size: 1.25rem;
-  }
-   .card-round-btn {
-    gap: 8px;
-  }
- }
-
- .works-item {
-  width: 100%;
-  justify-content: space-evenly;
-}
-.works-row {
-  gap: 48px;
-}
-.page-box {
-  padding-top: 48px;
-}
 }
 
 // modal 樣式
 .modal-dialog{
     max-width: 1076px !important;
+    border-radius: 8px;
     .modal-header{
       padding-top: 32px;
       padding-bottom: 0px;
+      border: 0px;
     }
     .header-box{
       padding: 40px 30px;
@@ -287,7 +318,59 @@
         padding-top: 28px;
       }
     }
+    .col-my-5{
+      position: relative;
+    }
+    .col-my-5::before{
+      content: "";
+      position: absolute;
+      background-color: #C1C1C1;
+      left: 0px;
+      width: 1px;
+      height: 100%;
+    }
+    .modal-body{
+      background-color: #F1F1F1;
+    }
 }
 .modal-body div +div{
   margin-top: 56px;
+
+}
+@media (max-width:992px) {
+  .modal-dialog{
+    padding: 68px 4px;
+    border-radius: 8px;
+
+  }
+  .header-box{
+    padding:24px 32px;
+    h5 +p{
+      margin-bottom: 24px;
+    }
+  }
+  .modal-dialog{
+    .col-my-5::before{
+      content: "";
+      position: absolute;
+      background-color: #C1C1C1;
+      top: 0px;
+      width: 100%;
+      height: 1px;
+    }
+    .col-my-5 .mb-2 {
+      text-align: center;
+      span{
+        display: block;
+        padding-bottom: 4px;
+      }
+    }
+    .modal-body{
+      padding: 40px 16px;
+    }
+    .modal-body div div{
+      text-align: left;
+    }
+  }
+  
 }

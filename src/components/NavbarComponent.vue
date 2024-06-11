@@ -51,71 +51,6 @@
           </RouterLink>
         </li>
       </ul>
-
-      <!-- <nav class="navbar-humber">
-        
-        <div class="nav-mobil-list">
-          <div class="logostyle">
-            <RouterLink to="/">
-              <h1>
-                <a class="navbar-brand">Noel</a>
-              </h1>
-            </RouterLink>
-          </div>
-          <div class="hambuger">
-            <button class="navbar-toggler" type="button">
-              
-            </button>
-          </div>
-        </div>
-        
-        <div class="margin-0-auto mobil-nav close">
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center mx-auto my-0"
-          >
-            <li class="nav-item nav-mobil-page">
-              <RouterLink
-                class="nav-link primary-800-color"
-                aria-current="page"
-                to="/"
-                ><span>首頁</span>
-              </RouterLink>
-            </li>
-            <li class="nav-item nav-mobil-page">
-              <RouterLink
-                class="nav-link primary-800-color"
-                aria-current="page"
-                to="/works"
-                ><span>作品集</span>
-              </RouterLink>
-            </li>
-            <li class="nav-item nav-mobil-page">
-              <RouterLink
-                class="nav-link primary-800-color"
-                aria-current="page"
-                to="/service"
-                ><span>服務項目</span>
-              </RouterLink>
-            </li>
-            <li class="nav-item nav-mobil-page">
-              <RouterLink
-                class="nav-link primary-800-color"
-                aria-current="page"
-                to="/blog"
-                ><span>部落格</span>
-              </RouterLink>
-            </li>
-            <li class="nav-item nav-mobil-page">
-              <RouterLink
-                class="nav-link primary-800-color"
-                aria-current="page"
-                to="/"
-                >聯絡我
-              </RouterLink>
-            </li>
-          </ul>
-        </div>
-      </nav> -->
     </div>
   </header>
 </template>
@@ -124,7 +59,7 @@
 export default {
   mounted() {
     // eslint-disable-next-line func-names
-    $('.navbar-toggler').click(function () {
+    $('.menu-control').click(function () {
       $('.hamber-icon').toggleClass('active');
       $('.hamber-icon').toggleClass('close');
       $('.close-icon').toggleClass('close');

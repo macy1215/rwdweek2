@@ -6,7 +6,7 @@
         ref="form"
         @submit.prevent="onSubmit"
         v-slot="{ errors }"
-        class="form-row row gx-5"
+        class="form-row row gx-md-5"
       >
         <div class="col-12">
           <label for="name" class="form-label w-100 primary-600-color fs-5"
@@ -200,13 +200,7 @@
           ></textarea>
         </div>
         <div class="col-md-12">
-          <button
-            class="btn btn-outline-dark"
-            type="submit"
-            @click="onSubmit()"
-          >
-            送出表單
-          </button>
+          <button class="btn btn-outline-dark" type="submit">送出表單</button>
         </div>
       </VeeForm>
     </div>
@@ -253,6 +247,7 @@ export default {
       return '請幫我至少勾選一個';
     },
     onSubmit() {
+      console.log(this.form, '點到了');
       Swal.fire({
         position: 'center',
         title: '謝謝您的來信，將有專員與您聯繫',

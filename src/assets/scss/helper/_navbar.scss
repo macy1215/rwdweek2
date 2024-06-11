@@ -120,7 +120,7 @@ h1 {
   .navbar-navList{
     display: none;
   }
-  .menu-control:checked ~ .navbar-nav{
+  .menu-control:checked ~ .navbar-navList{
     // 確認 input 的checkbou 如果未被點擊顯示 open 被點擊 顯示 close
     display: flex;
     width: 100%;

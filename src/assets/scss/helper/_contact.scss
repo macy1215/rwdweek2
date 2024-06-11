@@ -31,3 +31,14 @@
 .ckebock label:nth-child(2){
     padding-left: 0px;
 }
+
+@media (max-width:992px) {
+    .ckebock{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .ckebock label~label{
+        padding-left:0px;
+    }
+}

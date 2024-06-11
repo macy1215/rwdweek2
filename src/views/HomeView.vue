@@ -4,7 +4,9 @@
     <div class="container">
       <div class="banner-home">
         <div class="col-my-4 col-m-12">
-          <h2 class="fw-bold fs-1 lh-12 primary-700-color">Hi！我是 Noel</h2>
+          <h2 class="fw-bold fs-1 lh-12 primary-700-color text-center">
+            Hi！我是 Noel
+          </h2>
           <div class="mt-4 primary-600-color fs-5 mobil-layout">
             <span>具有 10 年經驗的</span>
             <span>資深 UI 設計師</span>
@@ -142,9 +144,7 @@
       </div>
       <div class="box-3">
         <div class="container h-100">
-          <div
-            class="box-row justify-content-space-between mobil-flex-dir h-100"
-          >
+          <div class="box-row mobil-flex-dir h-100">
             <div class="col-7 col-m-12">
               <div class="box-product-3">
                 <img
