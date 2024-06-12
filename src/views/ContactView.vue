@@ -2,12 +2,7 @@
   <div class="container">
     <div class="form-style">
       <h2 class="fs-2 fw-bold primary-700-color">請填寫聯絡表單</h2>
-      <VeeForm
-        ref="form"
-        @submit.prevent="onSubmit"
-        v-slot="{ errors }"
-        class="form-row row gx-md-5"
-      >
+      <VeeForm ref="form" v-slot="{ errors }" class="form-row row gx-md-5">
         <div class="col-12">
           <label for="name" class="form-label w-100 primary-600-color fs-5"
             >公司 or 個人單位名稱</label
@@ -200,7 +195,9 @@
           ></textarea>
         </div>
         <div class="col-md-12">
-          <button class="btn btn-outline-dark" type="submit">送出表單</button>
+          <button class="btn btn-outline-dark" type="submit" @click="onSubmit">
+            送出表單
+          </button>
         </div>
       </VeeForm>
     </div>
@@ -246,19 +243,43 @@ export default {
       }
       return '請幫我至少勾選一個';
     },
+    resetValidation() {
+      this.form.user.email = '';
+      this.form.user.phone = '';
+      this.form.user.companyName = '';
+      this.form.user.contactPerson = '';
+      this.form.user.price = '';
+    },
     onSubmit() {
-      console.log(this.form, '點到了');
-      Swal.fire({
-        position: 'center',
-        title: '謝謝您的來信，將有專員與您聯繫',
-        text: '工作日1-3日回覆',
-        icon: 'success',
-        confirmButtonText: 'Cool',
-        timer: 1500,
-      });
-      setTimeout(() => {
-        this.$router.push('/');
-      }, 2000);
+      if (
+        this.form.user.email !== '' &&
+        this.form.user.phone !== '' &&
+        this.form.user.companyName !== '' &&
+        this.form.user.contactPerson !== '' &&
+        this.form.user.price !== ''
+      ) {
+        console.log(this.form, '點到了');
+        Swal.fire({
+          position: 'center',
+          title: '謝謝您的來信，將有專員與您聯繫',
+          text: '工作日1-3日回覆',
+          icon: 'success',
+          timer: 1500,
+        }).then(() => {
+          this.form = '';
+          console.log(this.form, '清除了');
+          setTimeout(() => {
+            this.$router.push('/');
+          }, 2000);
+        });
+      } else {
+        Swal.fire({
+          position: 'center',
+          title: '尚未完整填入資訊，請繼續填寫',
+          icon: 'error',
+          confirmButtonText: '我知道了',
+        });
+      }
     },
   },
 };
